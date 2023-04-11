@@ -1,38 +1,101 @@
+@font-face {
+  font-family: "TAEBAEKmilkyway";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+}
+
 .App {
+  box-sizing: border-box;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar_box {
+  width: 100%;
+  position: fixed;
+  background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+  height: 67px;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  font-family: "TAEBAEKmilkyway";
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* navbar 제목 */
+.navbar h2 {
+  cursor: pointer;
+  margin: 0 auto 0 30px;
+}
+
+.navbar > a {
+  text-decoration: none;
+  color: black;
+}
+
+#navbar_btn_box {
+  padding: 0;
+  display: flex;
+  margin-left: auto;
+}
+
+/* navbar about skills works contact 버튼 */
+.navbar_btn {
+  margin-left: auto;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.navbar_btn a {
+  text-decoration: none;
+}
+
+.navbar_btn a p {
+  margin: 0;
+  font-weight: bold;
+  color: black;
+}
+
+.navbar_btn a p:hover {
+  color: rgb(107, 197, 197);
+}
+
+.item_box {
   display: flex;
   flex-direction: column;
+}
+
+.item {
+  display: flex;
+  height: 937px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: auto 0;
 }
 
-.App-link {
-  color: #61dafb;
+#about {
+  background-color: #db77ba;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#skills {
+  background-color: #ddbaba;
+}
+
+#works {
+  background-color: #789dac;
+}
+
+#contact {
+  background-color: #a1b397;
+}
+
+.top_btn {
+  position: fixed;
 }

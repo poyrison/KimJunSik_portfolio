@@ -1,23 +1,60 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="navbar_box">
+        <div className="navbar">
+          <a href="#">
+            <h2>J U N S I K</h2>
+          </a>
+          <ul id="navbar_btn_box">
+            <li className="navbar_btn">
+              <a href="#about">
+                <p>ABOUT</p>
+              </a>
+            </li>
+            <li className="navbar_btn">
+              <a href="#skills">
+                <p>SKILLS</p>
+              </a>
+            </li>
+            <li className="navbar_btn">
+              <a href="#works">
+                <p>WORKS</p>
+              </a>
+            </li>
+            <li className="navbar_btn">
+              <a href="#contact">
+                <p>CONTACT</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="item_box_area">
+        <div className="item_box">
+          <h3 className="item" id="about">
+            about
+          </h3>
+        </div>
+        <div className="item_box">
+          <h3 className="item" id="skills">
+            skills
+          </h3>
+        </div>
+        <div className="item_box">
+          <h3 className="item" id="works">
+            works
+          </h3>
+        </div>
+        <div className="item_box">
+          <h3 className="item" id="contact">
+            contact
+          </h3>
+        </div>
+      </div>
+      <button className="top_btn">▲</button>
     </div>
   );
 }
