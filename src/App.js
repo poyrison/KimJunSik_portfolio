@@ -33,7 +33,7 @@ function App() {
         </div>
       </div>
       <div className="item_box_area">
-        <div className="item_box">
+        <div className="item_box" id="top">
           <h3 className="item" id="about">
             about
           </h3>
@@ -54,7 +54,9 @@ function App() {
           </h3>
         </div>
       </div>
-      <button className="top_btn">▲</button>
+      <button className="top_btn">
+        <a href="#top">▲</a>
+      </button>
     </div>
   );
 }
