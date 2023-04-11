@@ -54,9 +54,11 @@ function App() {
           </h3>
         </div>
       </div>
-      <button className="top_btn">
-        <a href="#top">▲</a>
-      </button>
+      <div className="up_btn">
+        <a href="#top">
+          <i class="fi fi-br-chevron-double-up"></i>
+        </a>
+      </div>
     </div>
   );
 }

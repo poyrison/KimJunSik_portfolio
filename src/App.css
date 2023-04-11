@@ -95,3 +95,29 @@ body {
 #contact {
   background-color: #a1b397;
 }
+
+.up_btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.up_btn a {
+  display: flex;
+  height: 50px;
+  width: 50px;
+  align-items: center;
+  justify-content: center;
+  background-color: antiquewhite;
+  border-radius: 15px;
+  color: black;
+  text-decoration: none;
+  transition: all 0.4s ease 0s;
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px, rgb(0 0 0 / 15%) 0px 8px 30px,
+    rgb(255 255 255 / 20%) 0px 0px 0px 1px inset !important;
+}
+
+.up_btn a:hover {
+  /* transform: rotate(360deg); */
+  transform: rotateY(180deg);
+}
