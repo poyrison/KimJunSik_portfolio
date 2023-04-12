@@ -1,4 +1,5 @@
 import "./App.css";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -54,11 +55,12 @@ function App() {
           </h3>
         </div>
       </div>
-      <div className="up_btn">
+      <div className="btn_bottom_to_top">
         <a href="#top">
-          <i class="fi fi-br-chevron-double-up"></i>
+          <i className="fi fi-br-chevron-double-up"></i>
         </a>
       </div>
+      <Footer />
     </div>
   );
 }
