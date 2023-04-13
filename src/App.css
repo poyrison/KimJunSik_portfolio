@@ -46,8 +46,8 @@ body {
 /* navbar about skills works contact 버튼 */
 .navbar_btn {
   margin-left: auto;
+  margin-right: 20px;
   display: inline-block;
-  margin: 0 20px;
 }
 
 .navbar_btn a {
