@@ -4,34 +4,32 @@ import Footer from "./Footer";
 function App() {
   return (
     <div className="App">
-      <div className="navbar_box">
-        <div className="navbar">
-          <a href="#">
-            <h2>J U N S I K</h2>
-          </a>
-          <ul id="navbar_btn_box">
-            <li className="navbar_btn">
-              <a href="#about">
-                <p>ABOUT</p>
-              </a>
-            </li>
-            <li className="navbar_btn">
-              <a href="#skills">
-                <p>SKILLS</p>
-              </a>
-            </li>
-            <li className="navbar_btn">
-              <a href="#works">
-                <p>WORKS</p>
-              </a>
-            </li>
-            <li className="navbar_btn">
-              <a href="#contact">
-                <p>CONTACT</p>
-              </a>
-            </li>
-          </ul>
-        </div>
+      <div className="navbar">
+        <a href="#">
+          <h2>J U N S I K</h2>
+        </a>
+        <ul id="navbar_btn_box">
+          <li className="navbar_btn">
+            <a href="#about">
+              <p>ABOUT</p>
+            </a>
+          </li>
+          <li className="navbar_btn">
+            <a href="#skills">
+              <p>SKILLS</p>
+            </a>
+          </li>
+          <li className="navbar_btn">
+            <a href="#works">
+              <p>WORKS</p>
+            </a>
+          </li>
+          <li className="navbar_btn">
+            <a href="#contact">
+              <p>CONTACT</p>
+            </a>
+          </li>
+        </ul>
       </div>
       <div className="item_box_area">
         <div className="item_box" id="top">
@@ -64,5 +62,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
