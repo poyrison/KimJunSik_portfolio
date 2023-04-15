@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <div className="navbar">
-        <a href="#">
+        <a href="/">
           <h2>J U N S I K</h2>
         </a>
         <ul id="navbar_btn_box">
