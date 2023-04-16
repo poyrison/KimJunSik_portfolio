@@ -4,33 +4,48 @@ import Footer from "./Footer";
 function App() {
   return (
     <div className="App">
-      <div className="navbar">
-        <a href="/">
-          <h2>J U N S I K</h2>
-        </a>
-        <ul id="navbar_btn_box">
-          <li className="navbar_btn">
-            <a href="#about">
-              <p>ABOUT</p>
-            </a>
-          </li>
-          <li className="navbar_btn">
-            <a href="#skills">
-              <p>SKILLS</p>
-            </a>
-          </li>
-          <li className="navbar_btn">
-            <a href="#works">
-              <p>WORKS</p>
-            </a>
-          </li>
-          <li className="navbar_btn">
-            <a href="#contact">
-              <p>CONTACT</p>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">
+            J U N S I K
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <a className="nav-link" aria-current="page" href="#about">
+                  ABOUT
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#skills">
+                  SKILLS
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#works">
+                  WORKS
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#contact">
+                  CONTACT
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
       <div className="item_box_area">
         <div className="item_box" id="top">
           <h3 className="item" id="about">
