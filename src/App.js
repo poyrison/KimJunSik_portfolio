@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="#myPage">
             J U N S I K
           </a>
           <button
@@ -47,7 +47,7 @@ function App() {
         </div>
       </nav>
       <div className="item_box_area">
-        <div className="item_box" id="top">
+        <div className="item_box" id="myPage">
           <h3 className="item" id="about">
             about
           </h3>
@@ -69,7 +69,7 @@ function App() {
         </div>
       </div>
       <div className="btn_bottom_to_top">
-        <a href="#top">
+        <a href="#myPage">
           <i className="fi fi-br-chevron-double-up"></i>
         </a>
       </div>

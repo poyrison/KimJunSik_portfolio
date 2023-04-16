@@ -1,10 +1,10 @@
-/* @font-face {
+@font-face {
   font-family: "TAEBAEKmilkyway";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2")
     format("woff2");
   font-weight: normal;
   font-style: normal;
-} */
+}
 
 * {
   box-sizing: border-box;
@@ -19,6 +19,7 @@ body {
 }
 
 .navbar {
+  font-weight: bold !important;
   position: fixed;
   width: 100%;
   padding: 10px 40px;
