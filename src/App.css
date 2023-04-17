@@ -22,7 +22,7 @@ body {
   font-weight: bold !important;
   position: fixed;
   width: 100%;
-  padding: 10px 40px;
+  padding: 0 80px;
   display: flex;
   justify-content: space-between;
   font-family: "TAEBAEKmilkyway";
@@ -36,8 +36,12 @@ body {
   flex-grow: 0;
 }
 
+.nav-item {
+  padding: 10px 10px;
+}
+
 .nav-item a:hover {
-  color: rgb(107, 197, 197);
+  color: rgb(144, 216, 216);
   transition: all 0.15s;
 }
 
@@ -118,15 +122,19 @@ body {
 
 .footer_icon_box i:hover {
   transition: 0.4s;
+  animation-name: moveLeft;
+  animation-duration: 5s;
+  /* animation-direction: alternate; */
+  animation-iteration-count: infinite;
 }
 
-.github:hover {
+/* .github:hover {
   color: #536976;
 }
 
 .instagram:hover {
   color: #fd1d1d;
-}
+} */
 
 .footer_icon {
   cursor: pointer;
@@ -150,5 +158,41 @@ body {
 
   .collapse {
     margin-left: 0;
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    color: red;
+  }
+  10% {
+    color: orange;
+  }
+  20% {
+    color: green;
+  }
+  30% {
+    color: blue;
+  }
+  40% {
+    color: purple;
+  }
+  50% {
+    color: deeppink;
+  }
+  60% {
+    color: purple;
+  }
+  70% {
+    color: blue;
+  }
+  80% {
+    color: green;
+  }
+  90% {
+    color: orange;
+  }
+  100% {
+    color: red;
   }
 }
