@@ -5,6 +5,7 @@ import Footer from "./Footer";
 function App() {
   const [scroll, setScroll] = useState(0);
 
+  // 스크롤 커스텀
   useEffect(() => {
     let progressBarHandler = () => {
       const totalScroll = document.documentElement.scrollTop;
@@ -64,12 +65,8 @@ function App() {
             </ul>
           </div>
         </div>
-        <progress
-          className="progress"
-          value={`${scroll}`}
-          // style={{ opacity: `${scroll}` }}
-        ></progress>
       </nav>
+      <progress className="progress" value={`${scroll}`}></progress>
       <div className="item_box_area">
         <div className="item_box" id="myPage">
           <h3 className="item" id="about">
