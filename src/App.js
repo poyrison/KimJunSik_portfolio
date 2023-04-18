@@ -69,6 +69,11 @@ function App() {
       <progress className="progress" value={`${scroll}`}></progress>
       <div className="item_box_area">
         <div className="item_box" id="myPage">
+          <h3 className="item" id="home">
+            {`WELCOME TO MY PORTFOLIO :)`}
+          </h3>
+        </div>
+        <div className="item_box">
           <h3 className="item" id="about">
             about
           </h3>
@@ -89,11 +94,13 @@ function App() {
           </h3>
         </div>
       </div>
-      <div className="btn_bottom_to_top">
-        <a href="#myPage">
-          <i className="fi fi-br-chevron-double-up"></i>
-        </a>
-      </div>
+      {scroll >= 0.31 && (
+        <div className="btn_bottom_to_top">
+          <a href="#myPage">
+            <i className="fi fi-br-chevron-double-up"></i>
+          </a>
+        </div>
+      )}
       <Footer />
     </div>
   );
