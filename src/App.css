@@ -14,9 +14,15 @@ body {
   margin: 0;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .App {
   text-align: center;
 }
+
+/* navigation */
 
 .navbar {
   font-weight: bold !important;
@@ -26,6 +32,7 @@ body {
   display: flex;
   justify-content: space-between;
   font-family: "TAEBAEKmilkyway";
+  z-index: 1000;
 }
 
 .navbar-brand {
@@ -45,13 +52,7 @@ body {
   transition: all 0.15s;
 }
 
-.item_box_area {
-  scroll-snap-type: y mandatory;
-}
-
-.item_box_area .item_box {
-  scroll-snap-align: start;
-}
+/* content */
 
 .item {
   display: flex;
@@ -59,13 +60,61 @@ body {
   align-items: center;
   justify-content: center;
   margin: auto 0;
+  flex-direction: column;
 }
 
-#home::after {
-  margin-left: 5px;
+.home_title {
+  font-size: 35px;
+}
+
+.home_word {
+  font-size: 16px;
+}
+
+.home_title,
+.home_word {
+  font-family: "TAEBAEKmilkyway";
+  font-weight: bold;
+  color: white;
+}
+
+.hr {
+  display: flex;
+  width: 10vw;
+  height: 1px;
+  display: block;
+  background: #fff;
+  border: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.home_title::after {
   content: "|";
   display: inline-block;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
   animation: blink 0.7s infinite;
+  margin-left: 5px;
+  z-index: 1;
+}
+
+#myPage {
+  position: relative;
+  z-index: 1;
+  background-image: url("img/main-bg2.jpg");
+  background-position: center;
+  background-size: cover;
+  /* filter: brightness(50%); */
+  /* filter: blur(2px); */
+}
+
+#home {
+  backdrop-filter: brightness(50%) blur(2px);
+  background-image: url("img/home_cnt.png");
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #about {
@@ -84,10 +133,15 @@ body {
   background-color: #a1b397;
 }
 
+/* btn_bottom_to_top */
+
 .btn_bottom_to_top {
   position: fixed;
   right: 20px;
   bottom: 20px;
+  animation-name: moveTop;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
 .btn_bottom_to_top a {
@@ -106,8 +160,23 @@ body {
 }
 
 .btn_bottom_to_top a:hover {
-  transform: rotateY(180deg);
+  /* transform: rotateY(180deg); */
+  background-color: rgb(202, 191, 176);
 }
+
+/* btn_bottom_to_top opacity 설정 */
+
+.invisible {
+  opacity: 0;
+  transition: all ease 0.5s;
+}
+
+.visible {
+  opacity: 1;
+  transition: all ease 0.5s;
+}
+
+/* 상단 스크롤 이벤트 */
 
 .progress {
   position: fixed;
@@ -117,6 +186,7 @@ body {
   width: 100%;
   height: 3px;
   border-radius: 0x;
+  z-index: 10000;
 }
 
 progress::-webkit-progress-bar {
@@ -138,6 +208,8 @@ progress::-webkit-progress-value {
     #833ab4
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+/* footer */
 
 .footer_wrapper {
   display: flex;
@@ -163,14 +235,16 @@ progress::-webkit-progress-value {
   transition: 0.4s;
   animation-name: moveLeft;
   animation-duration: 5s;
-  /* animation-direction: alternate; */
   animation-iteration-count: infinite;
+  /* animation-direction: alternate; */
 }
 
 .footer_icon {
   cursor: pointer;
   margin: 5px;
 }
+
+/* 반응형 설정 */
 
 @media screen and (max-width: 1200px) {
   .progress {
@@ -204,7 +278,30 @@ progress::-webkit-progress-value {
   .progress {
     top: 0;
   }
+
+  .home_title {
+    font-size: 20px;
+  }
+
+  .home_word {
+    font-size: 14px;
+  }
+
+  .hr {
+    width: 10vh;
+  }
+
+  #myPage {
+    background-position: center;
+    background-size: cover;
+  }
+
+  #home {
+    background-size: 350px 350px;
+  }
 }
+
+/* animation 설정 */
 
 @keyframes blink {
   0% {
@@ -251,5 +348,17 @@ progress::-webkit-progress-value {
   }
   100% {
     color: red;
+  }
+}
+
+@keyframes moveTop {
+  0% {
+    bottom: 20px;
+  }
+  50% {
+    bottom: 40px;
+  }
+  100% {
+    bottom: 20px;
   }
 }

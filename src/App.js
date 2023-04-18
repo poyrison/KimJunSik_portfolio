@@ -1,11 +1,40 @@
-import { useEffect, useState } from "react";
 import "./App.css";
+
+import { useEffect, useState } from "react";
+
 import Footer from "./Footer";
 
 function App() {
-  const [scroll, setScroll] = useState(0);
+  const [scroll, setScroll] = useState(0); // scroll-bar
+  const [scrollBtnOpacity, setScrollBtnOpacity] = useState("invisible"); // btn_bottom_to_top opacity 설정
+  const [homeTitle, setHomeTitle] = useState("");
 
-  // 스크롤 커스텀
+  const [count, setCount] = useState(0);
+  const completionWord = "WELCOME TO MY PORTFOLIO :)";
+
+  // 메인화면 타이핑 효과
+  useEffect(() => {
+    const typingInterval = setInterval(() => {
+      setHomeTitle((prevTitleValue) => {
+        let result = prevTitleValue
+          ? prevTitleValue + completionWord[count]
+          : completionWord[0];
+        setCount(count + 1);
+
+        if (count >= completionWord.length) {
+          // setCount(0);
+          // setHomeTitle("");
+          return completionWord;
+        } else {
+          return result;
+        }
+      });
+    }, 100);
+
+    return () => clearInterval(typingInterval);
+  });
+
+  // 상단 스크롤 이벤트
   useEffect(() => {
     let progressBarHandler = () => {
       const totalScroll = document.documentElement.scrollTop;
@@ -21,6 +50,13 @@ function App() {
 
     return () => window.removeEventListener("scroll", progressBarHandler);
   });
+
+  // btn_bottom_to_top opacity 설정
+  useEffect(() => {
+    scroll >= 0.24
+      ? setScrollBtnOpacity("visible")
+      : setScrollBtnOpacity("invisible");
+  }, [scroll]);
 
   return (
     <div className="App">
@@ -69,9 +105,11 @@ function App() {
       <progress className="progress" value={`${scroll}`}></progress>
       <div className="item_box_area">
         <div className="item_box" id="myPage">
-          <h3 className="item" id="home">
-            {`WELCOME TO MY PORTFOLIO :)`}
-          </h3>
+          <div className="item" id="home">
+            <h2 className="home_title">{homeTitle}</h2>
+            <hr className="hr" />
+            <p className="home_word">프론트엔드 개발자 김준식입니다.</p>
+          </div>
         </div>
         <div className="item_box">
           <h3 className="item" id="about">
@@ -94,13 +132,11 @@ function App() {
           </h3>
         </div>
       </div>
-      {scroll >= 0.31 && (
-        <div className="btn_bottom_to_top">
-          <a href="#myPage">
-            <i className="fi fi-br-chevron-double-up"></i>
-          </a>
-        </div>
-      )}
+      <div className={`btn_bottom_to_top ${scrollBtnOpacity}`}>
+        <a href="#myPage">
+          <i className="fi fi-br-chevron-double-up"></i>
+        </a>
+      </div>
       <Footer />
     </div>
   );
