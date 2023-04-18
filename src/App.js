@@ -1,7 +1,26 @@
+import { useEffect, useState } from "react";
 import "./App.css";
 import Footer from "./Footer";
 
 function App() {
+  const [scroll, setScroll] = useState(0);
+
+  useEffect(() => {
+    let progressBarHandler = () => {
+      const totalScroll = document.documentElement.scrollTop;
+      const windowHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      const scroll = `${totalScroll / windowHeight}`;
+
+      setScroll(scroll);
+    };
+
+    window.addEventListener("scroll", progressBarHandler);
+
+    return () => window.removeEventListener("scroll", progressBarHandler);
+  });
+
   return (
     <div className="App">
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -33,8 +52,8 @@ function App() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#works">
-                  WORKS
+                <a className="nav-link" href="#project">
+                  PROJECT
                 </a>
               </li>
               <li className="nav-item">
@@ -45,6 +64,11 @@ function App() {
             </ul>
           </div>
         </div>
+        <progress
+          className="progress"
+          value={`${scroll}`}
+          // style={{ opacity: `${scroll}` }}
+        ></progress>
       </nav>
       <div className="item_box_area">
         <div className="item_box" id="myPage">
@@ -58,8 +82,8 @@ function App() {
           </h3>
         </div>
         <div className="item_box">
-          <h3 className="item" id="works">
-            works
+          <h3 className="item" id="project">
+            project
           </h3>
         </div>
         <div className="item_box">
@@ -77,4 +101,6 @@ function App() {
     </div>
   );
 }
+
+<script>{document.querySelectorAll(".progress")}</script>;
 export default App;
