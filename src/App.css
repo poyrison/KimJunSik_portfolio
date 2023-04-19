@@ -78,8 +78,7 @@ body::-webkit-scrollbar {
   color: white;
 }
 
-.hr {
-  display: flex;
+hr {
   width: 10vw;
   height: 1px;
   display: block;
@@ -100,7 +99,6 @@ body::-webkit-scrollbar {
 }
 
 #myPage {
-  position: relative;
   z-index: 1;
   background-image: url("img/main-bg2.jpg");
   background-position: center;
@@ -109,8 +107,15 @@ body::-webkit-scrollbar {
   /* filter: blur(2px); */
 }
 
-#home {
+.filterBox {
+  position: absolute;
+  width: 100%;
+  /* height: 938px; */
+  height: 100%;
   backdrop-filter: brightness(50%) blur(2px);
+}
+
+#home {
   background-image: url("img/home_cnt.png");
   background-size: 500px;
   background-repeat: no-repeat;
@@ -233,7 +238,7 @@ progress::-webkit-progress-value {
 
 .footer_icon_box i:hover {
   transition: 0.4s;
-  animation-name: moveLeft;
+  animation-name: rainbow;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   /* animation-direction: alternate; */
@@ -280,7 +285,7 @@ progress::-webkit-progress-value {
   }
 
   .home_title {
-    font-size: 20px;
+    font-size: 23px;
   }
 
   .home_word {
@@ -315,7 +320,7 @@ progress::-webkit-progress-value {
   }
 }
 
-@keyframes moveLeft {
+@keyframes rainbow {
   0% {
     color: red;
   }
