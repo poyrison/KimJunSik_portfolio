@@ -8,6 +8,8 @@
 
 * {
   box-sizing: border-box;
+  font-family: "TAEBAEKmilkyway";
+  font-weight: bold;
 }
 
 body {
@@ -25,13 +27,11 @@ body::-webkit-scrollbar {
 /* navigation */
 
 .navbar {
-  font-weight: bold !important;
   position: fixed;
   width: 100%;
   padding: 0 80px;
   display: flex;
   justify-content: space-between;
-  font-family: "TAEBAEKmilkyway";
   z-index: 1000;
 }
 
@@ -53,15 +53,6 @@ body::-webkit-scrollbar {
 }
 
 /* content */
-
-.item {
-  display: flex;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  margin: auto 0;
-  flex-direction: column;
-}
 
 .home_title {
   font-size: 35px;
@@ -103,14 +94,11 @@ hr {
   background-image: url("img/main-bg2.jpg");
   background-position: center;
   background-size: cover;
-  /* filter: brightness(50%); */
-  /* filter: blur(2px); */
 }
 
 .filterBox {
   position: absolute;
   width: 100%;
-  /* height: 938px; */
   height: 100%;
   backdrop-filter: brightness(50%) blur(2px);
 }
@@ -122,12 +110,32 @@ hr {
   background-position: center;
 }
 
+.content_title {
+  font-size: 30px;
+  margin-bottom: 80px;
+}
+
+.item_box {
+  height: 100vh;
+  padding: 90px;
+}
+
+.item {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
+  flex-direction: column;
+}
+
 #about {
   background-color: #db77ba;
 }
 
-#skills {
-  background-color: #ddbaba;
+.skill_img {
+  width: 80px;
+  height: 80px;
 }
 
 #project {
@@ -138,7 +146,7 @@ hr {
   background-color: #a1b397;
 }
 
-/* btn_bottom_to_top */
+/* btn_bottom_to_top 버튼 */
 
 .btn_bottom_to_top {
   position: fixed;
@@ -268,6 +276,9 @@ progress::-webkit-progress-value {
   .progress {
     top: 0;
   }
+  .item_box {
+    height: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -303,6 +314,10 @@ progress::-webkit-progress-value {
 
   #home {
     background-size: 350px 350px;
+  }
+
+  .item_box {
+    height: 100%;
   }
 }
 
