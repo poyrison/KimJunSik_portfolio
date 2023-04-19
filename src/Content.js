@@ -40,7 +40,7 @@ function Content({ homeTitle }) {
               return (
                 <Col sm key={i} className={`${gridStyle}`}>
                   <img
-                    src={`${process.env.PUBLIC_URL}/img/${logo[i]}.png`}
+                    src={process.env.PUBLIC_URL + `/img/${logo[i]}.png`}
                     alt={`${logo[i]}-logo`}
                     className="skill_img"
                   />
