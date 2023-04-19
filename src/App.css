@@ -91,7 +91,7 @@ hr {
 
 #myPage {
   z-index: 1;
-  background-image: url("img/main-bg2.jpg");
+  background-image: url("bg-image/main-bg2.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -104,7 +104,7 @@ hr {
 }
 
 #home {
-  background-image: url("img/home_cnt.png");
+  background-image: url("bg-image/home-cnt.png");
   background-size: 500px;
   background-repeat: no-repeat;
   background-position: center;
