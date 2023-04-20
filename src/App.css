@@ -16,9 +16,9 @@ body {
   margin: 0;
 }
 
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
   display: none;
-}
+} */
 
 .App {
   text-align: center;
@@ -90,8 +90,7 @@ hr {
 }
 
 #myPage {
-  z-index: 1;
-  background-image: url("bg-image/main-bg2.jpg");
+  background-image: url("bg-img/main-bg2.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -104,7 +103,7 @@ hr {
 }
 
 #home {
-  background-image: url("bg-image/home-cnt.png");
+  background-image: url("bg-img/home-cnt.png");
   background-size: 500px;
   background-repeat: no-repeat;
   background-position: center;
@@ -113,6 +112,7 @@ hr {
 .content_title {
   font-size: 30px;
   margin-bottom: 80px;
+  font-weight: bold;
 }
 
 .item_box {
