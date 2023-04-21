@@ -111,13 +111,14 @@ hr {
 
 .content_title {
   font-size: 30px;
-  margin-bottom: 80px;
+  margin-top: 70px;
+  margin-bottom: 40px;
   font-weight: bold;
 }
 
 .item_box {
   height: 100vh;
-  padding: 90px;
+  padding: 10px 50px;
 }
 
 .item {
@@ -136,6 +137,16 @@ hr {
 .skill_img {
   width: 80px;
   height: 80px;
+}
+
+.skill_title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 25px;
+}
+
+.skill_description {
+  margin-bottom: 70px;
 }
 
 #project {
@@ -168,8 +179,8 @@ hr {
   color: black;
   text-decoration: none;
   transition: all 0.4s ease 0s;
-  box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px, rgb(0 0 0 / 15%) 0px 8px 30px,
-    rgb(255 255 255 / 20%) 0px 0px 0px 1px inset !important;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
 }
 
 .btn_bottom_to_top a:hover {
@@ -318,6 +329,11 @@ progress::-webkit-progress-value {
 
   .item_box {
     height: 100%;
+  }
+
+  .skill_img {
+    width: 135px;
+    height: 135px;
   }
 }
 

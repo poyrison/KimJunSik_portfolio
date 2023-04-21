@@ -19,7 +19,12 @@ function Nav() {
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#about">
+              <a className="nav-link" aria-current="page" href="#home">
+                HOME
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#about">
                 ABOUT
               </a>
             </li>

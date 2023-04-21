@@ -3,18 +3,35 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 function Content({ homeTitle }) {
-  const logo = ["HTML5", "CSS3", "JavaScript", "ReactJS", "Git", "Bootstrap"];
-  const word = [
-    "마크업, 페이지 컨텐츠 구조화, 폼요소, 테이플 등 사용",
-    "배경, 텍스트, 이미지 스타일링, 반응형 레이아웃 등",
-    "네비게이션, 탭메뉴 구현 등",
-    "Component, Redux로 전역 상태관리, 데이터 파싱 등",
-    "프로젝트 코드 관리, add, commit, pull, branch, merge 등",
-    "레이아웃, 버튼, 입력창 등의 디자인에 사용",
+  const skills = [
+    {
+      title: "HTML5",
+      content: "마크업, 페이지 컨텐츠 구조화, 폼 및 테이플 등",
+    },
+    {
+      title: "CSS3",
+      content: "배경, 텍스트, 이미지 스타일링, 반응형 레이아웃 등",
+    },
+    { title: "Sass", content: "현재 공부중 ..." },
+    {
+      title: "JavaScript",
+      content: "ES6 최신 문법을 사용하여 동적 UI 구현",
+    },
+    {
+      title: "React",
+      content:
+        "Redux로 전역 상태관리, Component, styled-components, 데이터 파싱 등",
+    },
+    { title: "TypeScript", content: "현재 공부중 ..." },
+    { title: "Git", content: "프로젝트 버전 및 코드 관리, 협업 등" },
+    {
+      title: "Bootstrap",
+      content: "레이아웃, 버튼, 입력창 등의 디자인에 사용",
+    },
   ];
 
   // grid 클래스
-  const gridStyle = "col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4";
+  const gridStyle = "col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4";
 
   return (
     <div>
@@ -31,47 +48,33 @@ function Content({ homeTitle }) {
       </div>
       <Container fluid style={{ padding: 0 }}>
         <div className="item_box" id="about">
-          <h3 className="content_title" data-aos="fade-up">
-            about
-          </h3>
+          <h3 className="content_title">about</h3>
           <Row data-aos="fade-up"></Row>
         </div>
         <div className="item_box" id="skills">
-          <h3 data-aos="fade-up" className="content_title">
-            skills
-          </h3>
+          <h3 className="content_title">skills</h3>
           <Row data-aos="fade-up">
-            {logo.map((e, i) => {
+            {skills.map((e, i) => {
               return (
-                <Col sm key={i} className={`${gridStyle}`}>
+                <Col key={i} className={`skill_box ${gridStyle}`}>
                   <img
-                    src={process.env.PUBLIC_URL + `/img/${logo[i]}.png`}
-                    alt={`${logo[i]}-logo`}
+                    src={process.env.PUBLIC_URL + `/img/${skills[i].title}.png`}
+                    alt={`${skills[i].title}-logo`}
                     className="skill_img"
                   />
-                  <h5
-                    style={{
-                      fontSize: "20px",
-                      fontWeight: "bold",
-                      margin: "25px",
-                    }}
-                  >{`${logo[i]}`}</h5>
-                  <p style={{ marginBottom: "100px" }}>{`${word[i]}`}</p>
+                  <h5 className="skill_title">{`${skills[i].title}`}</h5>
+                  <p className="skill_description">{`${skills[i].content}`}</p>
                 </Col>
               );
             })}
           </Row>
         </div>
         <div className="item_box" id="project">
-          <h3 className="content_title" data-aos="fade-up">
-            project
-          </h3>
+          <h3 className="content_title">project</h3>
           <Col data-aos="fade-up"></Col>
         </div>
         <div className="item_box" id="contact">
-          <h3 className="content_title" data-aos="fade-up">
-            contact
-          </h3>
+          <h3 className="content_title">contact</h3>
           <Col data-aos="fade-up"></Col>
         </div>
       </Container>

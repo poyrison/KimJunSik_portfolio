@@ -18,8 +18,8 @@ function App() {
   // AOS
   useEffect(() => {
     Aos.init({
-      duration: 1500, // 1.5초에 걸쳐서 실행
-      delay: 100,
+      duration: 1500, // .. 초에 걸쳐서 실행
+      delay: 250, // .. 후에 실행
     });
   });
 
