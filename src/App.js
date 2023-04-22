@@ -9,10 +9,11 @@ import Aos from "aos";
 
 function App() {
   const [scroll, setScroll] = useState(0); // scroll-bar
-  const [scrollBtnOpacity, setScrollBtnOpacity] = useState("invisible"); // btn_bottom_to_top opacity 설정
+  const [scrollBtnOpacity, setScrollBtnOpacity] = useState("invisible"); // top_button opacity 설정
   const [homeTitle, setHomeTitle] = useState("");
 
   const [count, setCount] = useState(0);
+  const [count2, setCount2] = useState(0);
   const completionWord = "WELCOME TO MY PORTFOLIO :)";
 
   // AOS
@@ -68,7 +69,7 @@ function App() {
     return () => window.removeEventListener("scroll", progressBarHandler);
   });
 
-  // btn_bottom_to_top opacity 설정
+  // top_button opacity 설정
   useEffect(() => {
     scroll >= 0.24
       ? setScrollBtnOpacity("visible")
@@ -77,10 +78,15 @@ function App() {
 
   return (
     <div className="App">
-      <Nav />
+      {/* <Nav /> */}
+      <div className="background fixed">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+      </div>
       <progress className="progress" value={`${scroll}`}></progress>
       <Content homeTitle={homeTitle} />
-      <div className={`btn_bottom_to_top ${scrollBtnOpacity}`}>
+      <div className={`top_button ${scrollBtnOpacity}`}>
         <a href="#myPage">
           <i className="fi fi-br-chevron-double-up"></i>
         </a>

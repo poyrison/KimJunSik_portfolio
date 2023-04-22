@@ -7,26 +7,35 @@ function Content({ homeTitle }) {
     {
       title: "HTML5",
       content: "마크업, 페이지 컨텐츠 구조화, 폼 및 테이플 등",
+      aos: "fade-down-right",
     },
     {
       title: "CSS3",
       content: "배경, 텍스트, 이미지 스타일링, 반응형 레이아웃 등",
+      aos: "fade-down",
     },
-    { title: "Sass", content: "현재 공부중 ..." },
+    { title: "Sass", content: "현재 공부중 ...", aos: "fade-down-left" },
     {
       title: "JavaScript",
       content: "ES6 최신 문법을 사용하여 동적 UI 구현",
+      aos: "fade-up-right",
     },
     {
       title: "React",
       content:
         "Redux로 전역 상태관리, Component, styled-components, 데이터 파싱 등",
+      aos: "zoom-in",
     },
-    { title: "TypeScript", content: "현재 공부중 ..." },
-    { title: "Git", content: "프로젝트 버전 및 코드 관리, 협업 등" },
+    { title: "TypeScript", content: "현재 공부중 ...", aos: "fade-up-left" },
+    {
+      title: "Git",
+      content: "프로젝트 버전 및 코드 관리, 협업 등",
+      aos: "fade-up-right",
+    },
     {
       title: "Bootstrap",
       content: "레이아웃, 버튼, 입력창 등의 디자인에 사용",
+      aos: "fade-up-left",
     },
   ];
 
@@ -46,17 +55,23 @@ function Content({ homeTitle }) {
           <></>
         </div>
       </div>
-      <Container fluid style={{ padding: 0 }}>
+      <Container fluid style={{ padding: 0 }} className="container">
         <div className="item_box" id="about">
           <h3 className="content_title">about</h3>
-          <Row data-aos="fade-up"></Row>
+          <Row className="about_box">
+            <Col></Col>
+          </Row>
         </div>
-        <div className="item_box" id="skills">
+        <div className="item_box">
           <h3 className="content_title">skills</h3>
-          <Row data-aos="fade-up">
+          <Row className="skill_box" id="skills">
             {skills.map((e, i) => {
               return (
-                <Col key={i} className={`skill_box ${gridStyle}`}>
+                <Col
+                  key={i}
+                  className={`skill_item ${gridStyle}`}
+                  data-aos={`${skills[i].aos}`}
+                >
                   <img
                     src={process.env.PUBLIC_URL + `/img/${skills[i].title}.png`}
                     alt={`${skills[i].title}-logo`}
@@ -71,11 +86,15 @@ function Content({ homeTitle }) {
         </div>
         <div className="item_box" id="project">
           <h3 className="content_title">project</h3>
-          <Col data-aos="fade-up"></Col>
+          <Row className="project_box">
+            <Col></Col>
+          </Row>
         </div>
         <div className="item_box" id="contact">
           <h3 className="content_title">contact</h3>
-          <Col data-aos="fade-up"></Col>
+          <Row className="contact_box">
+            <Col></Col>
+          </Row>
         </div>
       </Container>
     </div>
