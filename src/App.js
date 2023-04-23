@@ -2,7 +2,6 @@ import "./App.css";
 
 import { useEffect, useState } from "react";
 
-import Nav from "./Nav";
 import Content from "./Content";
 import Footer from "./Footer";
 import Aos from "aos";
@@ -13,7 +12,6 @@ function App() {
   const [homeTitle, setHomeTitle] = useState("");
 
   const [count, setCount] = useState(0);
-  const [count2, setCount2] = useState(0);
   const completionWord = "WELCOME TO MY PORTFOLIO :)";
 
   // AOS
@@ -21,6 +19,7 @@ function App() {
     Aos.init({
       duration: 1500, // .. 초에 걸쳐서 실행
       delay: 250, // .. 후에 실행
+      once: true,
     });
   });
 
@@ -78,16 +77,15 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Nav /> */}
       <div className="background fixed">
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
       </div>
       <progress className="progress" value={`${scroll}`}></progress>
-      <Content homeTitle={homeTitle} />
+      <Content homeTitle={homeTitle} scroll={scroll} />
       <div className={`top_button ${scrollBtnOpacity}`}>
-        <a href="#myPage">
+        <a href="#home">
           <i className="fi fi-br-chevron-double-up"></i>
         </a>
       </div>

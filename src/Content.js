@@ -1,8 +1,18 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { useEffect, useState } from "react";
 
-function Content({ homeTitle }) {
+function Content({ homeTitle, scroll }) {
+  const [icon, setIcon] = useState("opacity-off");
+
+  useEffect(() => {
+    scroll >= 0.13 && setIcon("opacity-on");
+    if (scroll == 0) {
+      setIcon("opacity-off");
+    }
+  }, [scroll]);
+
   const skills = [
     {
       title: "HTML5",
@@ -44,15 +54,16 @@ function Content({ homeTitle }) {
 
   return (
     <div>
-      <div id="myPage">
-        <div className="filterBox"></div>
+      <div>
         <div className="item" id="home" data-aos="fade-up">
           <h2 className="home_title">{homeTitle}</h2>
           <hr />
           <p className="home_word">
             안녕하세요, 프론트엔드 개발자 김준식입니다.
           </p>
-          <></>
+          <div className={`icon_box ${icon}`}>
+            <p className="mouse" data-aos="fade-up" data-aos-delay="2000"></p>
+          </div>
         </div>
       </div>
       <Container fluid style={{ padding: 0 }} className="container">

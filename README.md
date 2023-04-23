@@ -5,6 +5,5 @@ Link: <https://kimjunsik-portfolio.netlify.app/>
 <hr/>
 
 1. HTML, CSS, JavaScript, React, Bootstrap 사용
-2. 다양한 섹션 나눔(about, skill, work, contact)
-3. Navigation bar의 원하는 섹션을 클릭하면 그 섹션으로 넘어감
-4. Navigation bar 하단에 있는 progress가 스크롤에 의해 변화함
+2. 다양한 섹션 나눔(about, skills, projects, contact)
+3. 각 섹션 마다 AOS 라이브러리 사용하여 스크롤 애니메이션 적용
