@@ -68,13 +68,17 @@ function Content({ homeTitle, scroll }) {
       </div>
       <Container fluid style={{ padding: 0 }} className="container">
         <div className="item_box" id="about">
-          <h3 className="content_title">about</h3>
+          <div className="content_title_box">
+            <h3 className="content_title">about</h3>
+          </div>
           <Row className="about_box">
             <Col></Col>
           </Row>
         </div>
         <div className="item_box">
-          <h3 className="content_title">skills</h3>
+          <div className="content_title_box">
+            <h3 className="content_title">skills</h3>
+          </div>
           <Row className="skill_box" id="skills">
             {skills.map((e, i) => {
               return (
@@ -96,13 +100,17 @@ function Content({ homeTitle, scroll }) {
           </Row>
         </div>
         <div className="item_box" id="project">
-          <h3 className="content_title">project</h3>
+          <div className="content_title_box">
+            <h3 className="content_title">project</h3>
+          </div>
           <Row className="project_box">
             <Col></Col>
           </Row>
         </div>
         <div className="item_box" id="contact">
-          <h3 className="content_title">contact</h3>
+          <div className="content_title_box">
+            <h3 className="content_title">contact</h3>
+          </div>
           <Row className="contact_box">
             <Col></Col>
           </Row>

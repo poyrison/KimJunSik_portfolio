@@ -2,9 +2,7 @@
 .mouse {
   background: #4e5559
     linear-gradient(transparent 0%, transparent 50%, #ffffff 50%, #ffffff 100%);
-  position: absolute;
-  left: 48.3vw;
-  bottom: 20px;
+  position: relative;
   width: 52px;
   height: 88px;
   border-radius: 100px;

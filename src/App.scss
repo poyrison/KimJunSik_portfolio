@@ -54,34 +54,46 @@ body {
   align-items: center;
 }
 
-/* navigation */
+/* top_button opacity 설정 */
 
-.navbar {
-  position: fixed;
-  width: 100%;
-  padding: 0 80px;
-  display: flex;
-  justify-content: space-between;
-  z-index: 1000;
-  opacity: 0.1;
+.invisible {
+  opacity: 0;
+  transition: all ease 0.5s;
 }
 
-.navbar-brand {
-  display: flex;
+.visible {
+  opacity: 1;
+  transition: all ease 0.5s;
 }
 
-.collapse {
-  flex-grow: 0;
-}
+// /* navigation */
 
-.nav-item {
-  padding: 10px 10px;
-}
+// .navbar {
+//   position: fixed;
+//   width: 100%;
+//   padding: 0 80px;
+//   display: flex;
+//   justify-content: space-between;
+//   z-index: 1000;
+//   opacity: 0.1;
+// }
 
-.nav-item a:hover {
-  color: rgb(144, 216, 216);
-  transition: all 0.15s;
-}
+// .navbar-brand {
+//   display: flex;
+// }
+
+// .collapse {
+//   flex-grow: 0;
+// }
+
+// .nav-item {
+//   padding: 10px 10px;
+// }
+
+// .nav-item a:hover {
+//   color: rgb(144, 216, 216);
+//   transition: all 0.15s;
+// }
 
 /* content */
 
@@ -127,27 +139,46 @@ hr {
   background-position: center;
 }
 
+.icon_box {
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  bottom: 20px;
+}
+
+.content_title_box {
+  position: absolute;
+  top: -320px;
+  left: -4.5rem;
+  transform: rotate(-25deg);
+  display: flex;
+  width: 100vw;
+  z-index: 500;
+  // justify-content: center;
+}
+
 .content_title {
   position: absolute;
+  display: flex;
+  justify-content: center;
   font-size: 30px;
-  background-color: rgb(34, 40, 49);
-  top: -23px;
-  left: 70px;
+  font-weight: bold;
   width: 150px;
   padding: 5px 20px;
   margin-bottom: -3px;
   margin-left: -3px;
-  font-weight: bold;
   color: #fff;
-  z-index: 100;
+  background-color: rgb(34, 40, 49);
   border: 3px solid #fff;
   border-radius: 15px;
+  z-index: 100;
 }
 
 .item_box {
   position: relative;
   margin-top: 35vh;
-  margin-bottom: 5vh;
+  margin-bottom: 10vh;
   height: 100vh;
   padding: 0 50px;
 }
@@ -239,18 +270,6 @@ hr {
   background-color: rgb(202, 191, 176);
 }
 
-/* top_button opacity 설정 */
-
-.invisible {
-  opacity: 0;
-  transition: all ease 0.5s;
-}
-
-.visible {
-  opacity: 1;
-  transition: all ease 0.5s;
-}
-
 /* 상단 스크롤 이벤트 */
 
 .progress {
@@ -311,9 +330,6 @@ progress::-webkit-progress-value {
 
 /* 반응형 설정 */
 
-@media screen and (max-width: 1200px) {
-}
-
 @media screen and (max-width: 992px) {
   .navbar {
     font-size: 10px;
@@ -363,6 +379,11 @@ progress::-webkit-progress-value {
     height: 100%;
   }
 
+  .content_title_box {
+    top: -15px;
+    left: -7.5rem;
+  }
+
   .skill_img {
     width: 135px;
     height: 135px;
@@ -376,7 +397,6 @@ progress::-webkit-progress-value {
     left: 31vw;
   }
   .mouse {
-    left: 45vw;
     width: 40px;
     height: 70px;
   }
