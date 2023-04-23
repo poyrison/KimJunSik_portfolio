@@ -8,7 +8,7 @@ function Content({ homeTitle, scroll }) {
 
   useEffect(() => {
     scroll >= 0.13 && setIcon("opacity-on");
-    if (scroll == 0) {
+    if (scroll <= 0) {
       setIcon("opacity-off");
     }
   }, [scroll]);
