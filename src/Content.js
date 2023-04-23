@@ -7,7 +7,7 @@ function Content({ homeTitle, scroll }) {
   const [icon, setIcon] = useState("invisible");
 
   useEffect(() => {
-    scroll >= 0.13 && setIcon("invisible");
+    scroll >= 0.1 && setIcon("invisible");
     if (scroll <= 0) {
       setIcon("visible");
     }
