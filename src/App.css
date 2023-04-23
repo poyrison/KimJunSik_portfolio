@@ -17,14 +17,18 @@ html {
   height: 100%;
 }
 
-.opacity-on {
+.invisible {
   opacity: 0;
-  transition: all 0.5s;
+  transition: all ease 0.5s;
 }
 
-.opacity-off {
+.visible {
   opacity: 1;
-  transition: all 0.5s;
+  transition: all ease 0.5s;
+}
+
+.fixed {
+  position: fixed;
 }
 
 .background {
@@ -40,30 +44,15 @@ body {
   margin: 0;
 }
 
-.fixed {
-  position: fixed;
-}
-
 .App {
   text-align: center;
 }
 
 .container {
   align-items: center;
+  padding: 0;
 }
 
-/* top_button opacity 설정 */
-.invisible {
-  opacity: 0;
-  transition: all ease 0.5s;
-}
-
-.visible {
-  opacity: 1;
-  transition: all ease 0.5s;
-}
-
-/* content */
 .home_title {
   font-size: 35px;
 }
@@ -112,33 +101,6 @@ hr {
   bottom: 20px;
 }
 
-.content_title_box {
-  position: absolute;
-  top: -385px;
-  left: -4.5vw;
-  transform: rotate(-25deg);
-  display: flex;
-  width: 100vw;
-  z-index: 500;
-}
-
-.content_title {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  font-size: 30px;
-  font-weight: bold;
-  width: 150px;
-  padding: 5px 20px;
-  margin-bottom: -3px;
-  margin-left: -3px;
-  color: #fff;
-  background-color: rgb(34, 40, 49);
-  border: 3px solid #fff;
-  border-radius: 15px;
-  z-index: 100;
-}
-
 .item_box {
   position: relative;
   margin-top: 35vh;
@@ -165,6 +127,26 @@ hr {
   border: 3px solid #fff;
   border-radius: 30px;
   justify-content: center;
+}
+
+.content_title {
+  position: absolute;
+  top: -1.7vh;
+  left: -2vw;
+  transform: rotate(-25deg);
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+  width: 150px;
+  padding: 5px 20px;
+  margin-bottom: -3px;
+  margin-left: -3px;
+  color: #fff;
+  background-color: rgb(34, 40, 49);
+  border: 3px solid #fff;
+  border-radius: 15px;
+  z-index: 100;
 }
 
 .skill_item {
@@ -306,10 +288,6 @@ progress::-webkit-progress-value {
   .item_box {
     height: 100%;
   }
-  .content_title_box {
-    top: -15px;
-    left: -7.5rem;
-  }
   .skill_img {
     width: 135px;
     height: 135px;
@@ -318,7 +296,7 @@ progress::-webkit-progress-value {
     width: 264px;
   }
   .content_title {
-    left: 31vw;
+    left: -9vw;
   }
   .mouse {
     width: 40px;

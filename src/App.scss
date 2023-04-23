@@ -19,14 +19,22 @@ html {
   height: 100%;
 }
 
-.opacity-on {
+// =========== opacity ===========
+
+.invisible {
   opacity: 0;
-  transition: all 0.5s;
+  transition: all ease 0.5s;
 }
 
-.opacity-off {
+.visible {
   opacity: 1;
-  transition: all 0.5s;
+  transition: all ease 0.5s;
+}
+
+// =========== fixed ===========
+
+.fixed {
+  position: fixed;
 }
 
 .background {
@@ -42,60 +50,16 @@ body {
   margin: 0;
 }
 
-.fixed {
-  position: fixed;
-}
-
 .App {
   text-align: center;
 }
 
 .container {
   align-items: center;
+  padding: 0;
 }
 
-/* top_button opacity 설정 */
-
-.invisible {
-  opacity: 0;
-  transition: all ease 0.5s;
-}
-
-.visible {
-  opacity: 1;
-  transition: all ease 0.5s;
-}
-
-// /* navigation */
-
-// .navbar {
-//   position: fixed;
-//   width: 100%;
-//   padding: 0 80px;
-//   display: flex;
-//   justify-content: space-between;
-//   z-index: 1000;
-//   opacity: 0.1;
-// }
-
-// .navbar-brand {
-//   display: flex;
-// }
-
-// .collapse {
-//   flex-grow: 0;
-// }
-
-// .nav-item {
-//   padding: 10px 10px;
-// }
-
-// .nav-item a:hover {
-//   color: rgb(144, 216, 216);
-//   transition: all 0.15s;
-// }
-
-/* content */
+// =========== content ===========
 
 .home_title {
   font-size: 35px;
@@ -147,34 +111,6 @@ hr {
   bottom: 20px;
 }
 
-.content_title_box {
-  position: absolute;
-  top: -385px;
-  left: -4.5vw;
-  transform: rotate(-25deg);
-  display: flex;
-  width: 100vw;
-  z-index: 500;
-  // justify-content: center;
-}
-
-.content_title {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  font-size: 30px;
-  font-weight: bold;
-  width: 150px;
-  padding: 5px 20px;
-  margin-bottom: -3px;
-  margin-left: -3px;
-  color: #fff;
-  background-color: rgb(34, 40, 49);
-  border: 3px solid #fff;
-  border-radius: 15px;
-  z-index: 100;
-}
-
 .item_box {
   position: relative;
   margin-top: 35vh;
@@ -203,11 +139,31 @@ hr {
   justify-content: center;
 }
 
-// about
+.content_title {
+  position: absolute;
+  top: -1.7vh;
+  left: -2vw;
+  transform: rotate(-25deg);
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+  width: 150px;
+  padding: 5px 20px;
+  margin-bottom: -3px;
+  margin-left: -3px;
+  color: #fff;
+  background-color: rgb(34, 40, 49);
+  border: 3px solid #fff;
+  border-radius: 15px;
+  z-index: 100;
+}
+
+// =========== about ===========
 .about_box {
 }
 
-// skill
+// =========== skill ===========
 .skill_item {
   padding-top: 20px;
 }
@@ -231,11 +187,11 @@ hr {
   margin-bottom: 70px;
 }
 
-// project
+// =========== project ===========
 .project_box {
 }
 
-// contact
+// =========== contact ===========
 .contact_box {
 }
 
@@ -379,22 +335,15 @@ progress::-webkit-progress-value {
     height: 100%;
   }
 
-  .content_title_box {
-    top: -15px;
-    left: -7.5rem;
-  }
-
   .skill_img {
     width: 135px;
     height: 135px;
-    // width: 95px;
-    // height: 95px;
   }
   .skill_item {
     width: 264px;
   }
   .content_title {
-    left: 31vw;
+    left: -9vw;
   }
   .mouse {
     width: 40px;

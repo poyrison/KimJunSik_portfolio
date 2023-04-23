@@ -4,12 +4,12 @@ import Col from "react-bootstrap/Col";
 import { useEffect, useState } from "react";
 
 function Content({ homeTitle, scroll }) {
-  const [icon, setIcon] = useState("opacity-off");
+  const [icon, setIcon] = useState("invisible");
 
   useEffect(() => {
-    scroll >= 0.13 && setIcon("opacity-on");
+    scroll >= 0.13 && setIcon("invisible");
     if (scroll <= 0) {
-      setIcon("opacity-off");
+      setIcon("visible");
     }
   }, [scroll]);
 
@@ -66,20 +66,16 @@ function Content({ homeTitle, scroll }) {
           </div>
         </div>
       </div>
-      <Container fluid style={{ padding: 0 }} className="container">
+      <Container fluid className="container">
         <div className="item_box" id="about">
-          <div className="content_title_box">
-            <h3 className="content_title">about</h3>
-          </div>
           <Row className="about_box">
+            <h3 className="content_title">about</h3>
             <Col></Col>
           </Row>
         </div>
         <div className="item_box">
-          <div className="content_title_box">
-            <h3 className="content_title">skills</h3>
-          </div>
           <Row className="skill_box" id="skills">
+            <h3 className="content_title">skills</h3>
             {skills.map((e, i) => {
               return (
                 <Col
@@ -100,18 +96,14 @@ function Content({ homeTitle, scroll }) {
           </Row>
         </div>
         <div className="item_box" id="project">
-          <div className="content_title_box">
-            <h3 className="content_title">project</h3>
-          </div>
           <Row className="project_box">
+            <h3 className="content_title">project</h3>
             <Col></Col>
           </Row>
         </div>
         <div className="item_box" id="contact">
-          <div className="content_title_box">
-            <h3 className="content_title">contact</h3>
-          </div>
           <Row className="contact_box">
+            <h3 className="content_title">contact</h3>
             <Col></Col>
           </Row>
         </div>
