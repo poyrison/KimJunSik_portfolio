@@ -243,9 +243,16 @@ progress::-webkit-progress-value {
   margin-top: 20px;
 }
 
-.footer_icon {
+.contact_icon_box {
+  display: flex;
+  margin: 30px;
+}
+
+.contact_icon {
+  align-items: flex-start;
   cursor: pointer;
   margin: 5px;
+  color: white;
 }
 
 /* 반응형 설정 */

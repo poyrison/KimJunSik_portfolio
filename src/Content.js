@@ -104,7 +104,26 @@ function Content({ homeTitle, scroll }) {
         <div className="item_box" id="contact">
           <Row className="contact_box">
             <h3 className="content_title">contact</h3>
-            <Col></Col>
+            <Col>
+              <div className="contact_icon_box">
+                <i
+                  title="GitHub"
+                  onClick={() => {
+                    window.open("https://github.com/poyrison");
+                  }}
+                  className="fa-brands fa-square-github fa-2xl contact_icon github"
+                ></i>
+              </div>
+              <div className="contact_icon_box">
+                <i
+                  title="Instagram"
+                  onClick={() => {
+                    window.open("https://www.instagram.com/jun._.sik/");
+                  }}
+                  className="fa-brands fa-square-instagram fa-2xl contact_icon instagram"
+                ></i>
+              </div>
+            </Col>
           </Row>
         </div>
       </Container>
