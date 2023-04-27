@@ -1,7 +1,11 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import { useEffect, useState } from "react";
+
+import About from "./Content/About.js";
+import Skills from "./Content/Skills.js";
+import Project from "./Content/Project.js";
+import Contact from "./Content/Contact.js";
 
 function Content({ homeTitle, scroll }) {
   const [icon, setIcon] = useState("invisible");
@@ -12,42 +16,6 @@ function Content({ homeTitle, scroll }) {
       setIcon("visible");
     }
   }, [scroll]);
-
-  const skills = [
-    {
-      title: "HTML5",
-      content: "마크업, 페이지 컨텐츠 구조화, 폼 및 테이플 등",
-      aos: "fade-down-right",
-    },
-    {
-      title: "CSS3",
-      content: "배경, 텍스트, 이미지 스타일링, 반응형 레이아웃 등",
-      aos: "fade-down",
-    },
-    { title: "Sass", content: "현재 공부중 ...", aos: "fade-down-left" },
-    {
-      title: "JavaScript",
-      content: "ES6 최신 문법을 사용하여 동적 UI 구현",
-      aos: "fade-up-right",
-    },
-    {
-      title: "React",
-      content:
-        "Redux로 전역 상태관리, Component, styled-components, 데이터 파싱 등",
-      aos: "zoom-in",
-    },
-    { title: "TypeScript", content: "현재 공부중 ...", aos: "fade-up-left" },
-    {
-      title: "Git",
-      content: "프로젝트 버전 및 코드 관리, 협업 등",
-      aos: "fade-up-right",
-    },
-    {
-      title: "Bootstrap",
-      content: "레이아웃, 버튼, 입력창 등의 디자인에 사용",
-      aos: "fade-up-left",
-    },
-  ];
 
   // grid 클래스
   const gridStyle = "col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4";
@@ -70,60 +38,25 @@ function Content({ homeTitle, scroll }) {
         <div className="item_box" id="about">
           <Row className="about_box">
             <h3 className="content_title">about</h3>
-            <Col></Col>
+            <About />
           </Row>
         </div>
         <div className="item_box">
           <Row className="skill_box" id="skills">
             <h3 className="content_title">skills</h3>
-            {skills.map((e, i) => {
-              return (
-                <Col
-                  key={i}
-                  className={`skill_item ${gridStyle}`}
-                  data-aos={`${skills[i].aos}`}
-                >
-                  <img
-                    src={process.env.PUBLIC_URL + `/img/${skills[i].title}.png`}
-                    alt={`${skills[i].title}-logo`}
-                    className="skill_img"
-                  />
-                  <h5 className="skill_title">{`${skills[i].title}`}</h5>
-                  <p className="skill_description">{`${skills[i].content}`}</p>
-                </Col>
-              );
-            })}
+            <Skills gridStyle={gridStyle} />
           </Row>
         </div>
         <div className="item_box" id="project">
           <Row className="project_box">
             <h3 className="content_title">project</h3>
-            <Col></Col>
+            <Project />
           </Row>
         </div>
         <div className="item_box" id="contact">
           <Row className="contact_box">
             <h3 className="content_title">contact</h3>
-            <Col>
-              <div className="contact_icon_box">
-                <i
-                  title="GitHub"
-                  onClick={() => {
-                    window.open("https://github.com/poyrison");
-                  }}
-                  className="fa-brands fa-square-github fa-2xl contact_icon github"
-                ></i>
-              </div>
-              <div className="contact_icon_box">
-                <i
-                  title="Instagram"
-                  onClick={() => {
-                    window.open("https://www.instagram.com/jun._.sik/");
-                  }}
-                  className="fa-brands fa-square-instagram fa-2xl contact_icon instagram"
-                ></i>
-              </div>
-            </Col>
+            <Contact />
           </Row>
         </div>
       </Container>

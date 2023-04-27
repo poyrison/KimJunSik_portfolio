@@ -1,14 +1,12 @@
+@charset "UTF-8";
 @import "scroll_icon.css";
 @import "stars.css";
-
 @font-face {
   font-family: "TAEBAEKmilkyway";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2")
-    format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
-
 * {
   box-sizing: border-box;
   font-family: "TAEBAEKmilkyway";
@@ -19,8 +17,6 @@ html {
   height: 100%;
 }
 
-// =========== opacity ===========
-
 .invisible {
   opacity: 0;
   transition: all ease 0.5s;
@@ -30,8 +26,6 @@ html {
   opacity: 1;
   transition: all ease 0.5s;
 }
-
-// =========== fixed ===========
 
 .fixed {
   position: fixed;
@@ -52,14 +46,13 @@ body {
 
 .App {
   text-align: center;
+  color: #fff;
 }
 
 .container {
   align-items: center;
   padding: 0;
 }
-
-// =========== content ===========
 
 .home_title {
   font-size: 35px;
@@ -79,8 +72,6 @@ body {
 .home_title::after {
   content: "|";
   display: inline-block;
-  -webkit-animation: blink 0.7s infinite;
-  -moz-animation: blink 0.7s infinite;
   animation: blink 0.7s infinite;
   margin-left: 5px;
   z-index: 1;
@@ -97,7 +88,7 @@ hr {
 }
 
 #home {
-  background-image: url("bg-img/home-cnt.png");
+  background-image: url("../bg-img/home-cnt.png");
   background-size: 500px;
   background-repeat: no-repeat;
   background-position: center;
@@ -152,24 +143,14 @@ hr {
   padding: 5px 20px;
   margin-bottom: -3px;
   margin-left: -3px;
-  color: #fff;
   background-color: rgb(34, 40, 49);
   border: 3px solid #fff;
   border-radius: 15px;
   z-index: 100;
 }
 
-// =========== about ===========
-.about_box {
-}
-
-// =========== skill ===========
 .skill_item {
   padding-top: 20px;
-}
-
-#skills {
-  color: #fff;
 }
 
 .skill_img {
@@ -187,18 +168,8 @@ hr {
   margin-bottom: 70px;
 }
 
-// =========== project ===========
-.project_box {
-}
-
-// =========== contact ===========
-.contact_box {
-}
-
 /* top_button 버튼 */
-
 .top_button {
-  position: fixed;
   right: 20px;
   bottom: 20px;
   animation-name: moveTop;
@@ -217,8 +188,7 @@ hr {
   color: black;
   text-decoration: none;
   transition: all 0.4s ease 0s;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px,
-    rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
 }
 
 .top_button a:hover {
@@ -227,9 +197,7 @@ hr {
 }
 
 /* 상단 스크롤 이벤트 */
-
 .progress {
-  position: fixed;
   left: 0;
   right: 0;
   width: 100%;
@@ -243,56 +211,48 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-  background: #00c3ff; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #ffff1c,
-    #00c3ff
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #ffff1c,
-    #00c3ff
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #00c3ff; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffff1c, #00c3ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /* footer */
-
 .footer_wrapper {
   display: flex;
   bottom: 0px;
   font-size: 12px;
   height: 150px;
   padding: 10px 5px;
-  background-color: #e9e6e6;
+  background-color: #222;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-.footer_box p {
-  padding: 5px;
+.footer_wrapper p {
   margin: 0;
 }
 
-.footer_icon_box {
-  margin-top: 20px;
+.contact_icon_box {
+  margin: 30px;
+  align-items: center;
 }
 
-.contact_icon_box {
-  display: flex;
-  margin: 30px;
+.contact_icon_box p {
+  margin-left: 20px;
+  display: inline-block;
+  color: #fff;
+}
+
+.contact_icon_box img,
+.contact_icon_box p {
+  cursor: pointer;
 }
 
 .contact_icon {
-  align-items: flex-start;
-  cursor: pointer;
   margin: 5px;
-  color: white;
 }
 
 /* 반응형 설정 */
-
 @media screen and (max-width: 992px) {
   .navbar {
     font-size: 10px;
@@ -301,47 +261,37 @@ progress::-webkit-progress-value {
   .collapse {
     margin-left: 0;
   }
-
   .item_box {
     height: 100%;
   }
 }
-
 @media screen and (max-width: 768px) {
   .navbar {
     font-size: 10px;
     padding: 10px 5px;
   }
-
   .collapse {
     margin-left: 0;
   }
-
   .home_title {
     font-size: 23px;
   }
-
   .home_word {
     font-size: 14px;
   }
-
   .hr {
     width: 10vh;
   }
-
   #myPage {
     background-position: center;
     background-size: cover;
   }
-
   #home {
     background-size: 350px 350px;
   }
-
   .item_box {
     height: 100%;
   }
-
   .skill_img {
     width: 135px;
     height: 135px;
@@ -365,9 +315,7 @@ progress::-webkit-progress-value {
     height: 7px;
   }
 }
-
 /* animation 설정 */
-
 @keyframes blink {
   0% {
     opacity: 1;
@@ -379,7 +327,6 @@ progress::-webkit-progress-value {
     opacity: 1;
   }
 }
-
 @keyframes moveTop {
   0% {
     bottom: 20px;
@@ -391,7 +338,6 @@ progress::-webkit-progress-value {
     bottom: 20px;
   }
 }
-
 @keyframes animStar {
   from {
     transform: translateY(0px);
@@ -399,4 +345,4 @@ progress::-webkit-progress-value {
   to {
     transform: translateY(-2000px);
   }
-}
+}/*# sourceMappingURL=App.css.map */

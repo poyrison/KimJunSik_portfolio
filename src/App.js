@@ -1,4 +1,4 @@
-import "./App.css";
+import "./css/App.css";
 
 import { useEffect, useState } from "react";
 
@@ -19,7 +19,7 @@ function App() {
     Aos.init({
       duration: 1500, // .. 초에 걸쳐서 실행
       delay: 250, // .. 후에 실행
-      once: true,
+      // once: true,
     });
   });
 
@@ -82,9 +82,9 @@ function App() {
         <div id="stars2"></div>
         <div id="stars3"></div>
       </div>
-      <progress className="progress" value={`${scroll}`}></progress>
+      <progress className="progress fixed" value={`${scroll}`}></progress>
       <Content homeTitle={homeTitle} scroll={scroll} />
-      <div className={`top_button ${scrollBtnOpacity}`}>
+      <div className={`top_button fixed ${scrollBtnOpacity}`}>
         <a href="#home">
           <i className="fi fi-br-chevron-double-up"></i>
         </a>
