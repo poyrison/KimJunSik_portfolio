@@ -12,23 +12,36 @@ function Skills({ gridStyle }) {
       content: "배경, 텍스트, 이미지 스타일링, 반응형 레이아웃 등",
       aos: "fade-down",
     },
-    { title: "Sass", content: "현재 공부중 ...", aos: "fade-down-left" },
+    {
+      title: "Sass",
+      content: "반복문과 변수사용 및 코드 중복 방지를 위해 사용",
+      aos: "fade-down-left",
+    },
     {
       title: "JavaScript",
-      content: "ES6+ 문법을 사용하여 동적 UI 구현",
-      aos: "fade-up-right",
+      content:
+        "Arrow functions, import, export, const, let 등의 ES6+ 문법을 사용",
+      aos: "fade-right",
     },
     {
       title: "React",
-      content:
-        "Redux로 전역 상태관리, Component, styled-components, 데이터 파싱 등",
+      content: "Component, styled-components, 데이터 파싱 등",
       aos: "zoom-in",
     },
-    { title: "TypeScript", content: "현재 공부중 ...", aos: "fade-up-left" },
+    {
+      title: "TypeScript",
+      content: "엄격한 타입 적용을 위해, 컴파일 단계에서 에러를 잡기 위해 사용",
+      aos: "fade-left",
+    },
+    {
+      title: "Redux",
+      content: "props가 사용되는 범위가 넓어질 때 redux로 전역 상태 관리",
+      aos: "fade-up-right",
+    },
     {
       title: "Git",
       content: "프로젝트 버전 및 코드 관리, 협업 등",
-      aos: "fade-up-right",
+      aos: "fade-up",
     },
     {
       title: "Bootstrap",

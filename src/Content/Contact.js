@@ -6,26 +6,11 @@ function Contact() {
     <>
       <Col>
         <div className="contact_icon_box">
-          <div data-aos="fade-right">
-            <a href="mailto:junsik8879@gmail.com">
-              <img
-                title="email"
-                alt="email"
-                className={`contact_icon email_icon `}
-                src="img/email.png"
-                width={`${size}`}
-                height={`${size}`}
-              />
-              <p>email</p>
-            </a>
-          </div>
-        </div>
-        <div className="contact_icon_box">
           <div
             onClick={() => {
               window.open("https://github.com/poyrison");
             }}
-            data-aos="zoom-in"
+            data-aos="fade-right"
           >
             <img
               title="Github"
@@ -43,7 +28,7 @@ function Contact() {
             onClick={() => {
               window.open("https://www.instagram.com/jun._.sik/");
             }}
-            data-aos="fade-left"
+            data-aos="zoom-in"
           >
             <img
               title="instagram"
@@ -54,6 +39,22 @@ function Contact() {
               height={`${size}`}
             />
             <p>instagram</p>
+          </div>
+        </div>
+        <div className="contact_icon_box">
+          <div data-aos="fade-left">
+            <a href="mailto:junsik8879@gmail.com">
+              <img
+                title="email"
+                alt="email"
+                className={`contact_icon email_icon `}
+                src="img/email.png"
+                width={`${size}`}
+                height={`${size}`}
+              />
+              {/* <p>email</p> */}
+              <p>junsik8879@gmail.com</p>
+            </a>
           </div>
         </div>
       </Col>

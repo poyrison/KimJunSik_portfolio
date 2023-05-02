@@ -37,7 +37,7 @@ function Content({ homeTitle, scroll }) {
       <Container fluid className="container">
         <div className="item_box" id="about">
           <Row className="about_box">
-            <h3 className="content_title">about</h3>
+            <h3 className="content_title">about me</h3>
             <About />
           </Row>
         </div>

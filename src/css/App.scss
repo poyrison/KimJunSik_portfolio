@@ -204,24 +204,26 @@ hr {
   animation-iteration-count: infinite;
 }
 
-.top_button a {
-  display: flex;
-  height: 50px;
-  width: 50px;
-  align-items: center;
-  justify-content: center;
-  background-color: antiquewhite;
-  border-radius: 30px;
-  color: black;
-  text-decoration: none;
-  transition: all 0.4s ease 0s;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px,
-    rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
-}
-
-.top_button a:hover {
-  /* transform: rotateY(180deg); */
-  background-color: rgb(202, 191, 176);
+.top_button {
+  // nesting 문법
+  a {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+    border-radius: 30px;
+    color: black;
+    text-decoration: none;
+    transition: all 0.4s ease 0s;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px,
+      rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
+  }
+  a:hover {
+    /* transform: rotateY(180deg); */
+    background-color: rgb(202, 191, 176);
+  }
 }
 
 /* 상단 스크롤 이벤트 */
@@ -265,26 +267,24 @@ progress::-webkit-progress-value {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
 
-.footer_wrapper p {
-  margin: 0;
+  p {
+    margin: 0;
+  }
 }
 
 .contact_icon_box {
   margin: 30px;
   align-items: center;
-}
-
-.contact_icon_box p {
-  margin-left: 20px;
-  display: inline-block;
-  color: #fff;
-}
-
-.contact_icon_box img,
-.contact_icon_box p {
-  cursor: pointer;
+  p {
+    margin-left: 20px;
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+  }
+  img {
+    cursor: pointer;
+  }
 }
 
 .contact_icon {
@@ -382,13 +382,13 @@ progress::-webkit-progress-value {
 
 @keyframes moveTop {
   0% {
-    bottom: 20px;
+    transform: translateY(-20px);
   }
   50% {
-    bottom: 40px;
+    transform: translateY(-40px);
   }
   100% {
-    bottom: 20px;
+    transform: translateY(-20px);
   }
 }
 
