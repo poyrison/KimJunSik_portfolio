@@ -19,7 +19,7 @@ function App() {
     Aos.init({
       duration: 1500, // .. 초에 걸쳐서 실행
       delay: 250, // .. 후에 실행
-      // once: true,
+      once: true,
     });
   });
 
