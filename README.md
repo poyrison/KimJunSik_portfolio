@@ -8,7 +8,7 @@
 
 - 기존에 JavaScript로 작성된 코드를 TypeScript로 변환
 
-<h3> My Tech Stack </h3>
+<h3> My Tech Stack 📚</h3>
 
 ![HTML5](https://img.shields.io/badge/-HTML5-F05032?style=for-the-badge&logo=html5&logoColor=ffffff)
 ![CSS3](https://img.shields.io/badge/-CSS3-007ACC?style=for-the-badge&logo=css3)
@@ -21,7 +21,7 @@
 
 # 주요 기능
 
-- HTML, CSS, JavaScript, React, Bootstrap 사용
-- 다양한 섹션 나눔(about, skills, projects, contact)
+- HTML, CSS, Sass, JavaScript, React, Bootstrap 사용
+- 다양한 섹션 나눔(about me, skills, projects, contact)
 - 각 섹션 마다 AOS 라이브러리를 사용하여 스크롤 애니메이션 적용
 - 화면 상단에 있는 progress가 스크롤에 의해 변화함

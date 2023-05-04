@@ -37,25 +37,25 @@ function Content({ homeTitle, scroll }) {
       <Container fluid className="container">
         <div className="item_box" id="about">
           <Row className="about_box">
-            <h3 className="content_title">about me</h3>
+            <h3 className="content_title">About me</h3>
             <About />
           </Row>
         </div>
         <div className="item_box">
           <Row className="skill_box" id="skills">
-            <h3 className="content_title">skills</h3>
+            <h3 className="content_title">Skills</h3>
             <Skills gridStyle={gridStyle} />
           </Row>
         </div>
         <div className="item_box" id="project">
           <Row className="project_box">
-            <h3 className="content_title">projects</h3>
+            <h3 className="content_title">Projects</h3>
             <Project />
           </Row>
         </div>
         <div className="item_box" id="contact">
           <Row className="contact_box">
-            <h3 className="content_title">contact</h3>
+            <h3 className="content_title">Contact</h3>
             <Contact />
           </Row>
         </div>

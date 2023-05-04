@@ -70,7 +70,7 @@ function App() {
 
   // top_button opacity 설정
   useEffect(() => {
-    scroll >= 0.24
+    scroll >= 0.08
       ? setScrollBtnOpacity("visible")
       : setScrollBtnOpacity("invisible");
   }, [scroll]);
