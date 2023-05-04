@@ -21,7 +21,6 @@
 
 # 주요 기능
 
-- HTML, CSS, Sass, JavaScript, React, Bootstrap 사용
 - 다양한 섹션 나눔(about me, skills, projects, contact)
 - 각 섹션 마다 AOS 라이브러리를 사용하여 스크롤 애니메이션 적용
 - 화면 상단에 있는 progress가 스크롤에 의해 변화함

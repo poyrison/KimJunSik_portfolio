@@ -9,7 +9,8 @@ function Skills({ gridStyle }) {
     },
     {
       title: "CSS3",
-      content: "배경, 텍스트, 이미지 스타일링, 반응형 레이아웃 등",
+      content:
+        "배경, 텍스트, 이미지 스타일링, 반응형 레이아웃, keyframe을 활용한 애니메이션 기법 등",
       aos: "fade-down",
     },
     {

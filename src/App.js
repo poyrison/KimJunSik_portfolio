@@ -16,11 +16,13 @@ function App() {
 
   // AOS
   useEffect(() => {
-    Aos.init({
-      duration: 1500, // .. 초에 걸쳐서 실행
-      delay: 250, // .. 후에 실행
-      once: true,
-    });
+    window.innerWidth <= 768
+      ? Aos.init({
+          disable: true,
+        })
+      : Aos.init({
+          duration: 1500, // .. 초에 걸쳐서 실행
+        });
   });
 
   // 메인화면 타이핑 효과

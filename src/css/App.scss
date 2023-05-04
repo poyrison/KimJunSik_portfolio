@@ -9,6 +9,8 @@
   font-style: normal;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
+
 * {
   box-sizing: border-box;
   font-family: "TAEBAEKmilkyway";
@@ -130,6 +132,11 @@ hr {
 }
 
 .about_box,
+.project_box {
+  height: 100vh;
+}
+
+.about_box,
 .skill_box,
 .project_box,
 .contact_box {
@@ -141,26 +148,33 @@ hr {
 }
 
 .content_title {
+  font-family: "Black Han Sans", sans-serif;
   position: absolute;
-  top: -1.7vh;
-  left: -2vw;
-  transform: rotate(-25deg);
-  display: flex;
-  justify-content: center;
-  font-size: 30px;
-  font-weight: bold;
-  width: 150px;
+  top: -9vh;
+  text-align: left;
+  font-size: 60px;
+  font-weight: 500;
+  width: 100%;
   padding: 5px 20px;
-  margin-bottom: -3px;
-  margin-left: -3px;
-  background-color: rgb(34, 40, 49);
-  border: 3px solid #fff;
-  border-radius: 15px;
+  color: rgb(0, 173, 181);
+  // transform: rotate(-25deg);
+  // background-color: rgb(34, 40, 49);
   z-index: 100;
 }
 
+@mixin contentTitle($content) {
+  content: $content;
+  position: absolute;
+  color: rgb(238, 238, 238);
+  top: -0.1vw;
+  left: 0.8vw;
+}
+
 // =========== about ===========
-.about_box {
+#about {
+  .content_title::after {
+    @include contentTitle("About me");
+  }
 }
 
 // =========== skill ===========
@@ -169,6 +183,9 @@ hr {
 }
 
 #skills {
+  .content_title::after {
+    @include contentTitle("Skills");
+  }
 }
 
 .skill_img {
@@ -187,11 +204,17 @@ hr {
 }
 
 // =========== project ===========
-.project_box {
+#project {
+  .content_title::after {
+    @include contentTitle("Projects");
+  }
 }
 
 // =========== contact ===========
-.contact_box {
+#contact {
+  .content_title::after {
+    @include contentTitle("Contact");
+  }
 }
 
 /* top_button 버튼 */
@@ -343,15 +366,30 @@ progress::-webkit-progress-value {
   }
 
   .skill_img {
+    // width: 50px;
+    // height: 50px;
     width: 135px;
     height: 135px;
+  }
+  .skill_description {
+    font-size: 14px;
   }
   .skill_item {
     width: 264px;
   }
   .content_title {
-    left: -9vw;
+    font-size: 30px;
   }
+  #about,
+  #skills,
+  #project,
+  #contact {
+    .content_title::after {
+      top: 0.3vw;
+      left: 4.5vw;
+    }
+  }
+
   .mouse {
     width: 40px;
     height: 70px;
