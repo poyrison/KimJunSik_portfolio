@@ -12,7 +12,10 @@
 
 <h3> 1. Front-End </h3>
 
-![HTML5](https://img.shields.io/badge/HTML5-F05032?style=for-thebadge&logo=html5&logoColor=ffffff)
+![HTML5](https://img.shields.io/badge/-HTML5-F05032?style=for-the-badge&logo=html5&logoColor=ffffff)
+![CSS3](https://img.shields.io/badge/-CSS3-F05032?style=for-thebadge&logo=css3)
+![JavaScript](https://img.shields.io/badge/-JavaScript-%23F7DF1C?style=for-the-badge&logo=javascript&logoColor=000000&labelColor=%23F7DF1C&color=%23FFCE5A)
+![React](https://img.shields.io/badge/-React-222222?style=for-the-badge&logo=react)
 
 <hr/>
 
