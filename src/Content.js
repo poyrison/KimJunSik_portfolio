@@ -49,7 +49,7 @@ function Content({ homeTitle, scroll }) {
         </div>
         <div className="item_box" id="project">
           <Row className="project_box">
-            <h3 className="content_title">project</h3>
+            <h3 className="content_title">projects</h3>
             <Project />
           </Row>
         </div>
