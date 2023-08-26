@@ -31,6 +31,7 @@ function Content({ homeTitle, scroll }) {
           </p>
           <div className={`icon_box ${icon}`}>
             <p className="mouse" data-aos="fade-up" data-aos-delay="2000"></p>
+            <i className="mouse-">Scroll Down</i>
           </div>
         </div>
       </div>

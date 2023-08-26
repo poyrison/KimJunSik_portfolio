@@ -24,24 +24,6 @@ function Contact() {
           </div>
         </div>
         <div className="contact_icon_box">
-          <div
-            onClick={() => {
-              window.open("https://www.instagram.com/jun._.sik/");
-            }}
-            data-aos="zoom-in"
-          >
-            <img
-              title="instagram"
-              alt="instagram"
-              className={`contact_icon instagram_icon `}
-              src="img/instagram.png"
-              width={`${size}`}
-              height={`${size}`}
-            />
-            <p>instagram</p>
-          </div>
-        </div>
-        <div className="contact_icon_box">
           <div data-aos="fade-left">
             <a href="mailto:junsik8879@gmail.com">
               <img
@@ -52,7 +34,6 @@ function Contact() {
                 width={`${size}`}
                 height={`${size}`}
               />
-              {/* <p>email</p> */}
               <p>junsik8879@gmail.com</p>
             </a>
           </div>

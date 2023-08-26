@@ -41,7 +41,7 @@ function Skills({ gridStyle }) {
     },
     {
       title: "Git",
-      content: "프로젝트 버전 및 코드 관리, 협업 등",
+      content: "프로젝트 버전 및 코드 관리",
       aos: "fade-up",
     },
     {
