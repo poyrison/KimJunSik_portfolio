@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 
 import Content from "./Content";
 import Footer from "./Footer";
-import test from "./test";
 import Aos from "aos";
 
 function App() {
