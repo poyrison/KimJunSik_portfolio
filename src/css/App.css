@@ -15,10 +15,6 @@
   font-weight: bold;
 }
 
-html {
-  height: 100%;
-}
-
 .invisible {
   opacity: 0;
   transition: all ease 0.5s;
@@ -89,19 +85,19 @@ hr {
   margin-bottom: 20px;
 }
 
-#home {
+/* #home {
   background-image: url("../bg-img/home-cnt.png");
-  background-size: 500px;
+  background-size: 450px;
   background-repeat: no-repeat;
   background-position: center;
-}
+} */
 
 .icon_box {
   position: absolute;
   width: 100vw;
   display: flex;
   justify-content: center;
-  bottom: 60px;
+  bottom: 100px;
 }
 
 .item_box {

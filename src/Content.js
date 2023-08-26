@@ -30,8 +30,10 @@ function Content({ homeTitle, scroll }) {
             안녕하세요, 프론트엔드 개발자 김준식입니다.
           </p>
           <div className={`icon_box ${icon}`}>
-            <p className="mouse" data-aos="fade-up" data-aos-delay="2000"></p>
-            <i className="mouse-">Scroll Down</i>
+            <p className="mouse" data-aos="fade-up" data-aos-delay="2500"></p>
+            <i data-aos="fade-up" data-aos-delay="2500">
+              Scroll Down
+            </i>
           </div>
         </div>
       </div>

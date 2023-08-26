@@ -18,7 +18,7 @@ function App() {
   useEffect(() => {
     window.innerWidth <= 768
       ? Aos.init({
-          disable: true,
+          disable: false,
         })
       : Aos.init({
           duration: 1500, // .. 초에 걸쳐서 실행
