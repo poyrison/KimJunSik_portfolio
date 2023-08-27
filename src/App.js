@@ -19,6 +19,7 @@ function App() {
     window.innerWidth <= 768
       ? Aos.init({
           disable: false,
+          once: true,
         })
       : Aos.init({
           duration: 1500, // .. 초에 걸쳐서 실행
