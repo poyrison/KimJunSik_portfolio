@@ -31,6 +31,7 @@ function About() {
                         process.env.PUBLIC_URL +
                         `/images/about-me/${skill.image}.png`
                       }
+                      alt={`${skill.image}.png`}
                     />
                   </div>
                   <div className="aboutMe-icon_content">
