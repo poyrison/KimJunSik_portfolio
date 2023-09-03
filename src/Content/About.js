@@ -8,7 +8,7 @@ function About() {
 
   const icon = [
     { image: "user", title: "이름", content: "김준식" },
-    { image: "calendar", title: "생년월일", content: "98.06.22" },
+    { image: "calendar", title: "생년월일", content: "1998.06.22" },
     { image: "home", title: "주소지", content: "인천광역시 계양구" },
   ];
 
