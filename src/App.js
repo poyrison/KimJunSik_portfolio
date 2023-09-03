@@ -61,9 +61,10 @@ function App() {
       const windowHeight =
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
-      const scroll = `${totalScroll / windowHeight}`;
+      // const scrolled = (totalScroll / windowHeight) * 100;
+      const scrolled = totalScroll / windowHeight;
 
-      setScroll(scroll);
+      setScroll(scrolled);
     };
 
     window.addEventListener("scroll", progressBarHandler);
@@ -85,6 +86,7 @@ function App() {
         <div id="stars2"></div>
         <div id="stars3"></div>
       </div>
+      {/* <div className="progress fixed" style={{ width: `${scroll}%` }}></div> */}
       <progress className="progress fixed" value={`${scroll}`}></progress>
       <Content homeTitle={homeTitle} scroll={scroll} />
       <div className={`top_button fixed ${scrollBtnOpacity}`}>

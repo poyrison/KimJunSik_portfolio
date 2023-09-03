@@ -69,9 +69,10 @@ function Skills({ gridStyle }) {
             key={i}
             className={`skill_item ${gridStyle}`}
             data-aos={`${skill.aos}`}
+            data-aos-once="true"
           >
             <img
-              src={process.env.PUBLIC_URL + `/img/${skill.title}.png`}
+              src={process.env.PUBLIC_URL + `/images/skills/${skill.title}.png`}
               alt={`${skill.title}-logo`}
               className="skill_img"
             />

@@ -84,13 +84,6 @@ hr {
   margin-bottom: 20px;
 }
 
-/* #home {
-  background-image: url("../bg-img/home-cnt.png");
-  background-size: 450px;
-  background-repeat: no-repeat;
-  background-position: center;
-} */
-
 .icon_box {
   position: absolute;
   width: 100vw;
@@ -103,7 +96,6 @@ hr {
   position: relative;
   margin-top: 35vh;
   margin-bottom: 10vh;
-  /* height: 100vh; */
   padding: 0 50px;
 }
 
@@ -159,8 +151,36 @@ hr {
 
 .about-text {
   white-space: pre-line;
-  line-height: 4.5;
+  line-height: 4.5; /*글 간격*/
   font-size: 18px;
+}
+
+.aboutMe-wrapper {
+  margin: 20px 50px 70px 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.aboutMe-icon_wrapper {
+  padding: 45px 0;
+  margin: 30px 0;
+}
+
+.aboutMe-icon-box {
+  display: flex;
+}
+
+.aboutMe-icon_img {
+  height: 24px;
+}
+
+.aboutMe-icon_content {
+  margin: 0 0 30px 30px;
+}
+
+.aboutMe-myImage {
+  height: 360px;
+  border-radius: 15%;
 }
 
 .skill_item {
@@ -243,6 +263,12 @@ hr {
   height: 3px;
   border-radius: 0;
   z-index: 10000;
+  background: #00c3ff; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffff1c,
+    #00c3ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 progress::-webkit-progress-bar {

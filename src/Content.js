@@ -30,8 +30,13 @@ function Content({ homeTitle, scroll }) {
             안녕하세요, 프론트엔드 개발자 김준식입니다.
           </p>
           <div className={`icon_box ${icon}`}>
-            <p className="mouse" data-aos="fade-up" data-aos-delay="2500"></p>
-            <i data-aos="fade-up" data-aos-delay="2500">
+            <p
+              className="mouse"
+              data-aos="fade-up"
+              data-aos-delay="3000"
+              data-aos-once="true"
+            ></p>
+            <i data-aos="fade-up" data-aos-delay="3000" data-aos-once="true">
               Scroll Down
             </i>
           </div>
@@ -40,7 +45,11 @@ function Content({ homeTitle, scroll }) {
       <Container fluid className="container">
         <div className="item_box" id="about">
           <Row className="about_box">
-            <h3 className="content_title" data-aos="fade-down-left">
+            <h3
+              className="content_title"
+              data-aos="fade-down-left"
+              data-aos-once="true"
+            >
               About me
             </h3>
             <About />
@@ -48,7 +57,11 @@ function Content({ homeTitle, scroll }) {
         </div>
         <div className="item_box">
           <Row className="skill_box" id="skills">
-            <h3 className="content_title" data-aos="fade-down-left">
+            <h3
+              className="content_title"
+              data-aos="fade-down-left"
+              data-aos-once="true"
+            >
               Skills
             </h3>
             <Skills gridStyle={gridStyle} />
@@ -56,7 +69,11 @@ function Content({ homeTitle, scroll }) {
         </div>
         <div className="item_box" id="project">
           <Row className="project_box">
-            <h3 className="content_title" data-aos="fade-down-left">
+            <h3
+              className="content_title"
+              data-aos="fade-down-left"
+              data-aos-once="true"
+            >
               Projects
             </h3>
             <Project />
@@ -64,7 +81,11 @@ function Content({ homeTitle, scroll }) {
         </div>
         <div className="item_box" id="contact">
           <Row className="contact_box">
-            <h3 className="content_title" data-aos="fade-down-left">
+            <h3
+              className="content_title"
+              data-aos="fade-down-left"
+              data-aos-once="true"
+            >
               Contact
             </h3>
             <Contact />
