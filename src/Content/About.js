@@ -19,6 +19,7 @@ function About() {
           <img
             className="aboutMe-myImage"
             src={process.env.PUBLIC_URL + `images/about-me/myImage.png`}
+            alt="myImage.png"
           />
           <div className="aboutMe-icon_wrapper">
             {icon.map((skill, i) => {
