@@ -5,7 +5,8 @@ function Skills({ gridStyle }) {
     {
       title: "HTML5",
       content: `웹표준을 지키려 노력합니다.
-      media query를 사용해 반응형 웹페이지를 작성할 수 있습니다.`,
+      media query를 사용해 반응형 웹페이지를
+      작성할 수 있습니다.`,
       aos: "fade-down-right",
     },
     {
@@ -38,14 +39,14 @@ function Skills({ gridStyle }) {
     },
     {
       title: "TypeScript",
-      content: `엄격한 타입 적용을 위해, 컴파일 단계에서
-       에러를 잡기 위해 사용`,
+      content: `엄격한 타입 적용, 컴파일 단계에서
+       에러를 잡을 때 사용하기 위해 현재 공부 중입니다.`,
       aos: "fade-left",
     },
     {
       title: "Redux",
       content: `props가 사용되는 범위가 넓어질 때
-       redux로 전역 상태 관리`,
+       redux로 전역 상태 관리를 할 수 있습니다.`,
       aos: "fade-up-right",
     },
     {

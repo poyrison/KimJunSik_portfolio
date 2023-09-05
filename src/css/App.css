@@ -29,6 +29,10 @@
   position: fixed;
 }
 
+.flex {
+  display: flex;
+}
+
 .background {
   background-color: rgb(34, 40, 49);
   width: 100%;
@@ -92,7 +96,7 @@ hr {
   bottom: 100px;
 }
 
-.item_box {
+.item_wrapper {
   position: relative;
   margin-top: 35vh;
   margin-bottom: 10vh;
@@ -128,6 +132,27 @@ hr {
   padding-top: 25px;
 }
 
+.project_box {
+  padding: 30px;
+  background-color: rgb(238, 238, 238);
+}
+
+.projects-wrapper {
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.project-img_area {
+  flex-direction: column;
+  margin-bottom: 30px;
+  height: 300px;
+  border-radius: 15px;
+}
+
+.project-img_script {
+  color: black;
+}
+
 .content_title {
   font-family: "Black Han Sans", sans-serif;
   position: absolute;
@@ -156,14 +181,13 @@ hr {
 }
 
 .aboutMe-wrapper {
-  margin: 20px 50px 70px 50px;
+  margin: 20px 50px;
   display: flex;
   justify-content: space-evenly;
 }
 
 .aboutMe-icon_wrapper {
   padding: 45px 0;
-  margin: 30px 0;
 }
 
 .aboutMe-icon-box {
@@ -327,7 +351,7 @@ progress::-webkit-progress-value {
   .collapse {
     margin-left: 0;
   }
-  .item_box {
+  .item_wrapper {
     height: 100%;
   }
 }
@@ -355,7 +379,7 @@ progress::-webkit-progress-value {
   #home {
     background-size: 350px 350px;
   }
-  .item_box {
+  .item_wrapper {
     height: 100%;
   }
   .skill_img {

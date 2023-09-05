@@ -43,7 +43,7 @@ function Content({ homeTitle, scroll }) {
         </div>
       </div>
       <Container fluid className="container">
-        <div className="item_box" id="about">
+        <div className="item_wrapper" id="about">
           <Row className="about_box">
             <h3
               className="content_title"
@@ -55,7 +55,7 @@ function Content({ homeTitle, scroll }) {
             <About />
           </Row>
         </div>
-        <div className="item_box">
+        <div className="item_wrapper">
           <Row className="skill_box" id="skills">
             <h3
               className="content_title"
@@ -67,7 +67,7 @@ function Content({ homeTitle, scroll }) {
             <Skills gridStyle={gridStyle} />
           </Row>
         </div>
-        <div className="item_box" id="project">
+        <div className="item_wrapper" id="project">
           <Row className="project_box">
             <h3
               className="content_title"
@@ -79,7 +79,7 @@ function Content({ homeTitle, scroll }) {
             <Project />
           </Row>
         </div>
-        <div className="item_box" id="contact">
+        <div className="item_wrapper" id="contact">
           <Row className="contact_box">
             <h3
               className="content_title"

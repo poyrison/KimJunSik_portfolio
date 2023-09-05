@@ -6,10 +6,21 @@ function About() {
    또한 Backend 영역에도 흥미를 느끼고 있으며, 현재의 분야에만 국한되지 않고 다양한 개발 분야에 열정을 품고 노력하고 있습니다.
    지속적으로 완성도 높은 코드와 UI를 위해 고민하는 개발자로 성장하고 싶습니다.`;
 
-  const icon = [
-    { image: "user", title: "이름", content: "김준식" },
-    { image: "calendar", title: "생년월일", content: "1998.06.22" },
-    { image: "home", title: "주소지", content: "인천광역시 계양구" },
+  const aboutMeIcon = [
+    { image: "user", title: "이름", content: "김준식", aos: "300" },
+    { image: "calendar", title: "생년월일", content: "1998.06.22", aos: "600" },
+    {
+      image: "home",
+      title: "주소지",
+      content: "인천광역시 계양구",
+      aos: "900",
+    },
+    {
+      image: "pencil",
+      title: "학교",
+      content: "중원대학교(컴퓨터공학과)",
+      aos: "1200",
+    },
   ];
 
   return (
@@ -18,13 +29,21 @@ function About() {
         <div className="aboutMe-wrapper">
           <img
             className="aboutMe-myImage"
-            src={process.env.PUBLIC_URL + `images/about-me/myImage.png`}
+            src={process.env.PUBLIC_URL + `images/about-me/mimoticon.png`}
             alt="myImage.png"
+            data-aos="fade-right"
+            data-aos-once="true"
           />
           <div className="aboutMe-icon_wrapper">
-            {icon.map((skill, i) => {
+            {aboutMeIcon.map((skill, i) => {
               return (
-                <div className="aboutMe-icon-box" key={i}>
+                <div
+                  className="aboutMe-icon-box"
+                  key={i}
+                  data-aos="fade-left"
+                  data-aos-once="true"
+                  data-aos-duration={`${skill.aos}`}
+                >
                   <div>
                     <img
                       className="aboutMe-icon_img"
