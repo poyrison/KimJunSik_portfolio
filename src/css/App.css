@@ -140,17 +140,64 @@ hr {
 .projects-wrapper {
   flex-direction: column;
   overflow: hidden;
+  padding: 0 10% 0 10%;
 }
 
 .project-img_area {
+  position: relative;
   flex-direction: column;
-  margin-bottom: 30px;
-  height: 300px;
-  border-radius: 15px;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  border-radius: 20px;
+}
+
+.project-img_area img {
+  border-radius: 20px;
+  height: 30vw;
+  width: 100%;
 }
 
 .project-img_script {
   color: black;
+}
+
+.project-img_info:hover {
+  background-color: #1f1b1bb6;
+  transition: 0.3s;
+  opacity: 1;
+}
+
+.project-img_info {
+  transition: 0.3s;
+  opacity: 0;
+  position: absolute;
+  border-radius: 20px;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.project-img_info svg {
+  margin: 0 30px;
+  width: 150px;
+  height: 150px;
+}
+.project-img_info svg:hover {
+  cursor: pointer;
+  filter: brightness(0.6);
+}
+
+.project-img_info svg {
+  height: 150px;
+}
+
+.project-img_infoBox {
+  justify-content: center;
+  display: flex;
+  padding: 140px 0;
+  height: 100%;
+  width: 100%;
 }
 
 .content_title {
@@ -203,8 +250,9 @@ hr {
 }
 
 .aboutMe-myImage {
+  animation: left-right-moving 3s infinite;
   height: 360px;
-  border-radius: 15%;
+  border-radius: 50%;
 }
 
 .skill_item {
@@ -255,9 +303,7 @@ hr {
 .top_button {
   right: 20px;
   bottom: 20px;
-  animation-name: moveTop;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation: moveTop 2s infinite;
 }
 
 .top_button a {
@@ -450,3 +496,15 @@ progress::-webkit-progress-value {
     transform: translateY(-2000px);
   }
 } /*# sourceMappingURL=App.css.map */
+
+@keyframes left-right-moving {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
