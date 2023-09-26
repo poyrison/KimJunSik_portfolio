@@ -29,11 +29,11 @@ function Nav() {
             id="navbarTogglerDemo02"
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <a className="nav-link" aria-current="page" href="#home">
                   {`< Home />`}
                 </a>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <a className="nav-link" href="#about-section">
                   {`< About />`}
