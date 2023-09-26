@@ -51,24 +51,37 @@ body {
 }
 
 #navbar {
-  backdrop-filter: blur(2.115px) !important;
-  background-color: rgba(32, 34, 36, 0.565) !important;
+  background-color: transparent !important;
   position: fixed;
   z-index: 1000;
   width: 100%;
   padding: 10px 100px;
-}
-
-#navbar a {
-  color: #fff;
-}
-
-#navbar a:not(.navbar-brand):hover {
-  color: rgb(0, 173, 181);
+  transition: 0.3s;
+  /* box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25); */
 }
 
 .nav-item {
   padding: 0 1rem 0 0;
+}
+
+#navbarBlur {
+  backdrop-filter: blur(2.115px) !important;
+  background-color: rgba(11, 25, 39, 0.565) !important;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  padding: 10px 100px;
+  transition: 0.3s;
+}
+
+#navbar a,
+#navbarBlur a {
+  color: #fff;
+}
+
+#navbar a:not(.navbar-brand):hover,
+#navbarBlur a:not(.navbar-brand):hover {
+  color: rgb(0, 173, 181);
 }
 
 .container {
@@ -174,7 +187,7 @@ hr {
 
 .project-img_area img {
   border-radius: 20px;
-  height: 30vw;
+  height: 50vh;
   width: 100%;
 }
 
@@ -201,8 +214,8 @@ hr {
 
 .project-img_info svg {
   margin: 0 30px;
-  width: 150px;
-  height: 150px;
+  width: 10vw;
+  height: 100vh;
 }
 .project-img_info svg:hover {
   cursor: pointer;
