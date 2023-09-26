@@ -45,6 +45,7 @@ function Content({ homeTitle, scroll }) {
       <Container fluid className="container">
         <div className="item_wrapper" id="about">
           <Row className="about_box">
+            <div className="section-heightBox" id="about-section"></div>
             <h3
               className="content_title"
               data-aos="fade-down-left"
@@ -57,6 +58,7 @@ function Content({ homeTitle, scroll }) {
         </div>
         <div className="item_wrapper">
           <Row className="skill_box" id="skills">
+            <div className="section-heightBox" id="skills-section"></div>
             <h3
               className="content_title"
               data-aos="fade-down-left"
@@ -69,6 +71,7 @@ function Content({ homeTitle, scroll }) {
         </div>
         <div className="item_wrapper" id="project">
           <Row className="project_box">
+            <div className="section-heightBox" id="project-section"></div>
             <h3
               className="content_title"
               data-aos="fade-down-left"
@@ -81,6 +84,7 @@ function Content({ homeTitle, scroll }) {
         </div>
         <div className="item_wrapper" id="contact">
           <Row className="contact_box">
+            <div className="section-heightBox" id="contact-section"></div>
             <h3
               className="content_title"
               data-aos="fade-down-left"

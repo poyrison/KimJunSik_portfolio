@@ -1,6 +1,7 @@
+@charset "UTF-8";
 @import "scroll_icon.css";
 @import "stars.css";
-
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
 @font-face {
   font-family: "TAEBAEKmilkyway";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2")
@@ -8,9 +9,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
-
 * {
   box-sizing: border-box;
   font-family: "TAEBAEKmilkyway";
@@ -21,8 +19,6 @@ html {
   height: 100%;
 }
 
-// =========== opacity ===========
-
 .invisible {
   opacity: 0;
   transition: all ease 0.5s;
@@ -32,8 +28,6 @@ html {
   opacity: 1;
   transition: all ease 0.5s;
 }
-
-// =========== fixed ===========
 
 .fixed {
   position: fixed;
@@ -62,8 +56,6 @@ body {
   padding: 0;
 }
 
-// =========== content ===========
-
 .home_title {
   font-size: 35px;
 }
@@ -82,8 +74,6 @@ body {
 .home_title::after {
   content: "|";
   display: inline-block;
-  -webkit-animation: blink 0.7s infinite;
-  -moz-animation: blink 0.7s infinite;
   animation: blink 0.7s infinite;
   margin-left: 5px;
   z-index: 1;
@@ -99,12 +89,12 @@ hr {
   margin-bottom: 20px;
 }
 
-#home {
+/* #home {
   background-image: url("../bg-img/home-cnt.png");
   background-size: 500px;
   background-repeat: no-repeat;
   background-position: center;
-}
+} */
 
 .icon_box {
   position: absolute;
@@ -152,35 +142,27 @@ hr {
   width: 100%;
   padding: 5px 20px;
   color: rgb(0, 173, 181);
-  // transform: rotate(-25deg);
-  // background-color: rgb(34, 40, 49);
   z-index: 100;
 }
 
-@mixin contentTitle($content) {
-  content: $content;
+#about .content_title::after {
+  content: "About me";
   position: absolute;
   color: rgb(238, 238, 238);
   top: -0.1vw;
   left: 0.8vw;
 }
 
-// =========== about ===========
-#about {
-  .content_title::after {
-    @include contentTitle("About me");
-  }
-}
-
-// =========== skill ===========
 .skill_item {
   padding-top: 20px;
 }
 
-#skills {
-  .content_title::after {
-    @include contentTitle("Skills");
-  }
+#skills .content_title::after {
+  content: "Skills";
+  position: absolute;
+  color: rgb(238, 238, 238);
+  top: -0.1vw;
+  left: 0.8vw;
 }
 
 .skill_img {
@@ -198,22 +180,23 @@ hr {
   margin-bottom: 70px;
 }
 
-// =========== project ===========
-#project {
-  .content_title::after {
-    @include contentTitle("Projects");
-  }
+#project .content_title::after {
+  content: "Projects";
+  position: absolute;
+  color: rgb(238, 238, 238);
+  top: -0.1vw;
+  left: 0.8vw;
 }
 
-// =========== contact ===========
-#contact {
-  .content_title::after {
-    @include contentTitle("Contact");
-  }
+#contact .content_title::after {
+  content: "Contact";
+  position: absolute;
+  color: rgb(238, 238, 238);
+  top: -0.1vw;
+  left: 0.8vw;
 }
 
 /* top_button 버튼 */
-
 .top_button {
   right: 20px;
   bottom: 20px;
@@ -222,30 +205,26 @@ hr {
   animation-iteration-count: infinite;
 }
 
-.top_button {
-  // nesting 문법
-  a {
-    display: flex;
-    height: 50px;
-    width: 50px;
-    align-items: center;
-    justify-content: center;
-    background-color: antiquewhite;
-    border-radius: 30px;
-    color: black;
-    text-decoration: none;
-    transition: all 0.4s ease 0s;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px,
-      rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
-  }
-  a:hover {
-    /* transform: rotateY(180deg); */
-    background-color: rgb(202, 191, 176);
-  }
+.top_button a {
+  display: flex;
+  height: 50px;
+  width: 50px;
+  align-items: center;
+  justify-content: center;
+  background-color: antiquewhite;
+  border-radius: 30px;
+  color: black;
+  text-decoration: none;
+  transition: all 0.4s ease 0s;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
+}
+.top_button a:hover {
+  /* transform: rotateY(180deg); */
+  background-color: rgb(202, 191, 176);
 }
 
 /* 상단 스크롤 이벤트 */
-
 .progress {
   left: 0;
   right: 0;
@@ -260,12 +239,7 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-  background: #00c3ff; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #ffff1c,
-    #00c3ff
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: #00c3ff; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
     #ffff1c,
@@ -274,7 +248,6 @@ progress::-webkit-progress-value {
 }
 
 /* footer */
-
 .footer_wrapper {
   display: flex;
   bottom: 0px;
@@ -285,24 +258,23 @@ progress::-webkit-progress-value {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
-  p {
-    margin: 0;
-  }
+}
+.footer_wrapper p {
+  margin: 0;
 }
 
 .contact_icon_box {
   margin: 30px;
   align-items: center;
-  p {
-    margin-left: 20px;
-    display: inline-block;
-    color: #fff;
-    cursor: pointer;
-  }
-  img {
-    cursor: pointer;
-  }
+}
+.contact_icon_box p {
+  margin-left: 20px;
+  display: inline-block;
+  color: #fff;
+  cursor: pointer;
+}
+.contact_icon_box img {
+  cursor: pointer;
 }
 
 .contact_icon {
@@ -310,7 +282,6 @@ progress::-webkit-progress-value {
 }
 
 /* 반응형 설정 */
-
 @media screen and (max-width: 992px) {
   .navbar {
     font-size: 10px;
@@ -319,50 +290,38 @@ progress::-webkit-progress-value {
   .collapse {
     margin-left: 0;
   }
-
   .item_box {
     height: 100%;
   }
 }
-
 @media screen and (max-width: 768px) {
   .navbar {
     font-size: 10px;
     padding: 10px 5px;
   }
-
   .collapse {
     margin-left: 0;
   }
-
   .home_title {
     font-size: 23px;
   }
-
   .home_word {
     font-size: 14px;
   }
-
   .hr {
     width: 10vh;
   }
-
   #myPage {
     background-position: center;
     background-size: cover;
   }
-
   #home {
     background-size: 350px 350px;
   }
-
   .item_box {
     height: 100%;
   }
-
   .skill_img {
-    // width: 50px;
-    // height: 50px;
     width: 135px;
     height: 135px;
   }
@@ -375,16 +334,13 @@ progress::-webkit-progress-value {
   .content_title {
     font-size: 30px;
   }
-  #about,
-  #skills,
-  #project,
-  #contact {
-    .content_title::after {
-      top: 0.3vw;
-      left: 4.5vw;
-    }
+  #about .content_title::after,
+  #skills .content_title::after,
+  #project .content_title::after,
+  #contact .content_title::after {
+    top: 0.3vw;
+    left: 4.5vw;
   }
-
   .mouse {
     width: 40px;
     height: 70px;
@@ -397,16 +353,12 @@ progress::-webkit-progress-value {
     width: 7px;
     height: 7px;
   }
-  .contact_icon_box {
-    p {
-      display: block;
-      margin: 5px 0 0 0;
-    }
+  .contact_icon_box p {
+    display: block;
+    margin: 5px 0 0 0;
   }
 }
-
 /* animation 설정 */
-
 @keyframes blink {
   0% {
     opacity: 1;
@@ -418,7 +370,6 @@ progress::-webkit-progress-value {
     opacity: 1;
   }
 }
-
 @keyframes moveTop {
   0% {
     transform: translateY(-20px);
@@ -430,7 +381,6 @@ progress::-webkit-progress-value {
     transform: translateY(-20px);
   }
 }
-
 @keyframes animStar {
   from {
     transform: translateY(0px);
@@ -438,4 +388,4 @@ progress::-webkit-progress-value {
   to {
     transform: translateY(-2000px);
   }
-}
+} /*# sourceMappingURL=App.css.map */

@@ -50,6 +50,20 @@ body {
   color: #fff;
 }
 
+#navbar {
+  backdrop-filter: blur(2.115px) !important;
+  background-color: rgba(32, 34, 36, 0.565) !important;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  padding: 10px 100px;
+}
+#navbar a {
+  color: #fff;
+}
+#navbar a:not(.navbar-brand):hover {
+  color: rgb(0, 173, 181);
+}
 .container {
   align-items: center;
   padding: 0;
@@ -200,6 +214,12 @@ hr {
   width: 100%;
 }
 
+.section-heightBox {
+  height: 90px;
+  position: absolute;
+  top: -180px;
+}
+
 .content_title {
   font-family: "Black Han Sans", sans-serif;
   position: absolute;
@@ -250,7 +270,7 @@ hr {
 }
 
 .aboutMe-myImage {
-  animation: left-right-moving 3s infinite;
+  /* animation: left-right-moving 3s infinite; */
   height: 360px;
   border-radius: 50%;
 }
@@ -323,35 +343,6 @@ hr {
 .top_button a:hover {
   /* transform: rotateY(180deg); */
   background-color: rgb(202, 191, 176);
-}
-
-/* 상단 스크롤 이벤트 */
-.progress {
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 3px;
-  border-radius: 0;
-  z-index: 10000;
-  background: #00c3ff; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #ffff1c,
-    #00c3ff
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-progress::-webkit-progress-bar {
-  background-color: rgb(34, 40, 49);
-}
-
-progress::-webkit-progress-value {
-  background: #00c3ff; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #ffff1c,
-    #00c3ff
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /* footer */

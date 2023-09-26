@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import Content from "./Content";
 import Footer from "./Footer";
+import Nav from "./Nav";
 import Aos from "aos";
 
 function App() {
@@ -54,23 +55,22 @@ function App() {
     }
   }, [scroll]);
 
-  // 상단 스크롤 이벤트
+  // scroll event
   useEffect(() => {
-    let progressBarHandler = () => {
+    const progressBarHandler = () => {
       const totalScroll = document.documentElement.scrollTop;
       const windowHeight =
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
-      // const scrolled = (totalScroll / windowHeight) * 100;
-      const scrolled = totalScroll / windowHeight;
 
+      const scrolled = totalScroll / windowHeight;
       setScroll(scrolled);
     };
 
     window.addEventListener("scroll", progressBarHandler);
 
     return () => window.removeEventListener("scroll", progressBarHandler);
-  });
+  }, []);
 
   // top_button opacity 설정
   useEffect(() => {
@@ -86,8 +86,7 @@ function App() {
         <div id="stars2"></div>
         <div id="stars3"></div>
       </div>
-      {/* <div className="progress fixed" style={{ width: `${scroll}%` }}></div> */}
-      <progress className="progress fixed" value={`${scroll}`}></progress>
+      <Nav />
       <Content homeTitle={homeTitle} scroll={scroll} />
       <div className={`top_button fixed ${scrollBtnOpacity}`}>
         <a href="#home">
