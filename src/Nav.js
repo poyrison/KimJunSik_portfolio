@@ -1,19 +1,31 @@
-import { useEffect, useState } from "react";
-
-function Nav() {
-  const collapse = "collapse d-flex justify-content-end";
-  const navbarCollapse = "collapse navbar-collapse";
+function Nav({ navVisibility }) {
+  const wideNavbar = "collapse d-flex justify-content-end";
+  const narrowNavbar = "collapse navbar-collapse";
   const scroll = document.documentElement.scrollTop;
   const clientWidth = document.documentElement.clientWidth;
 
-  const [navVisibility, setNavVisibility] = useState("invisible");
-
-  useEffect(() => {
-    scroll >= 200 && setNavVisibility("visible");
-    if (scroll <= 200) {
-      setNavVisibility("invisible");
-    }
-  }, [scroll]);
+  const navItems = [
+    {
+      id: 0,
+      href: "#about-section",
+      name: "< About />",
+    },
+    {
+      id: 1,
+      href: "#skills-section",
+      name: "< Skills />",
+    },
+    {
+      id: 2,
+      href: "#project-section",
+      name: "< Projects />",
+    },
+    {
+      id: 3,
+      href: "#contact-section",
+      name: "< Contact />",
+    },
+  ];
 
   return (
     <>
@@ -37,30 +49,21 @@ function Nav() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div
-            className={`${clientWidth <= 992 ? navbarCollapse : collapse}`}
+            className={`${clientWidth <= 992 ? narrowNavbar : wideNavbar}`}
             id="navbarTogglerDemo02"
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link" href="#about-section">
-                  {`< About />`}
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#skills-section">
-                  {`< Skills />`}
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#project-section">
-                  {`< Projects />`}
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#contact-section">
-                  {`< Contact />`}
-                </a>
-              </li>
+              {navItems.map((navItem, i) => {
+                return (
+                  <>
+                    <li className="nav-item" key={navItem.id}>
+                      <a className="nav-link" href={`${navItem.href}`}>
+                        {`${navItem.name}`}
+                      </a>
+                    </li>
+                  </>
+                );
+              })}
             </ul>
           </div>
         </div>

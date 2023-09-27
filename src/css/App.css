@@ -215,7 +215,6 @@ hr {
 .project-img_info svg {
   margin: 0 30px;
   width: 10vw;
-  height: 100vh;
 }
 .project-img_info svg:hover {
   cursor: pointer;
@@ -385,19 +384,26 @@ hr {
   margin: 30px;
   align-items: center;
 }
+
+.contact_icon_box a:hover {
+  filter: brightness(0.6);
+}
+
 .contact_icon_box p {
   margin-left: 20px;
   display: inline-block;
   color: #fff;
   cursor: pointer;
 }
-.contact_icon_box img {
-  cursor: pointer;
-}
 
 .contact_icon {
+  cursor: pointer;
   margin: 5px;
 }
+
+/* .contact_icon:hover {
+  filter: brightness(0.6);
+} */
 
 /* 반응형 설정 */
 @media screen and (max-width: 992px) {

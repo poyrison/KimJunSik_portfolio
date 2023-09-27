@@ -10,6 +10,7 @@ import Aos from "aos";
 function App() {
   const [scroll, setScroll] = useState(0); // scroll-bar
   const [scrollBtnOpacity, setScrollBtnOpacity] = useState("invisible"); // top_button opacity 설정
+  const [navVisibility, setNavVisibility] = useState("invisible");
   const [homeTitle, setHomeTitle] = useState("");
 
   const [count, setCount] = useState(0);
@@ -55,6 +56,21 @@ function App() {
     }
   }, [scroll]);
 
+  // scroll값에 의한 navbar opacity값 설정
+  useEffect(() => {
+    const scroll = document.documentElement.scrollTop;
+
+    const navVisibleTimer = () => {
+      setNavVisibility("visible");
+    };
+    setInterval(navVisibleTimer, 3000);
+
+    scroll >= 200 && setNavVisibility("visible");
+    if (scroll <= 200) {
+      setNavVisibility("invisible");
+    }
+  }, []);
+
   // scroll event
   useEffect(() => {
     const progressBarHandler = () => {
@@ -86,7 +102,7 @@ function App() {
         <div id="stars2"></div>
         <div id="stars3"></div>
       </div>
-      <Nav />
+      <Nav navVisibility={navVisibility} />
       <Content homeTitle={homeTitle} scroll={scroll} />
       <div className={`top_button fixed ${scrollBtnOpacity}`}>
         <a href="#home">
