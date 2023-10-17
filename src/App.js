@@ -10,6 +10,9 @@ import Aos from "aos";
 
 function App() {
   const [scroll] = useState(0); // scroll-bar
+  const [navScroll, setNavScroll] = useState(
+    document.documentElement.scrollTop
+  );
   const [navVisibility, setNavVisibility] = useState("invisible");
   const [homeTitle, setHomeTitle] = useState("");
 
@@ -121,6 +124,19 @@ function App() {
     scroll >= 200 ? setNavVisibility("visible") : setNavVisibility("invisible");
   }, []);
 
+  // scroll 값에 의한 navbar 배경색 blur 유무
+  useEffect(() => {
+    const handleScroll = () => {
+      setNavScroll(document.documentElement.scrollTop);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="App">
       <div className="background fixed">
@@ -129,7 +145,7 @@ function App() {
         <div id="stars2"></div>
         <div id="stars3"></div>
       </div>
-      <Nav navVisibility={navVisibility} />
+      <Nav navVisibility={navVisibility} navScroll={navScroll} />
       <Content homeTitle={homeTitle} scroll={scroll} />
       <div className={`top_button fixed `}>
         <a href="#home">

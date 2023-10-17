@@ -1,7 +1,6 @@
-function Nav({ navVisibility }) {
+function Nav({ navVisibility, navScroll }) {
   const wideNavbar = "collapse d-flex justify-content-end";
   const narrowNavbar = "collapse navbar-collapse";
-  const scroll = document.documentElement.scrollTop;
   const clientWidth = document.documentElement.clientWidth;
 
   const navItems = [
@@ -26,12 +25,11 @@ function Nav({ navVisibility }) {
       name: "< Contact />",
     },
   ];
-
   return (
     <>
       <nav
         className={`navbar navbar-expand-lg bg-body-tertiary ${navVisibility}`}
-        id={`${scroll <= 200 ? "navbar" : "navbarBlur"}`}
+        id={`${navScroll <= 200 ? "navbar" : "navbarBlur"}`}
       >
         <div className="container-fluid">
           <a className="navbar-brand" href="#home">
