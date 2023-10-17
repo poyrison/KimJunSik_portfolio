@@ -15,10 +15,6 @@
   font-weight: bold;
 }
 
-html {
-  height: 100%;
-}
-
 .invisible {
   opacity: 0;
   transition: all ease 0.5s;
@@ -31,6 +27,10 @@ html {
 
 .fixed {
   position: fixed;
+}
+
+.flex {
+  display: flex;
 }
 
 .background {
@@ -47,8 +47,45 @@ body {
 }
 
 .App {
-  text-align: center;
   color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+#navbar {
+  background-color: transparent !important;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  padding: 10px 100px;
+  transition: 0.3s;
+  /* box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25); */
+}
+
+.nav-item {
+  padding: 0 1rem 0 0;
+}
+
+#navbarBlur {
+  backdrop-filter: blur(4px) !important;
+  background-color: rgba(11, 25, 39, 0.565) !important;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  padding: 10px 100px;
+  transition: 0.3s;
+}
+
+#navbar a,
+#navbarBlur a {
+  color: #fff;
+}
+
+#navbar a:not(.navbar-brand):hover,
+#navbarBlur a:not(.navbar-brand):hover {
+  color: rgb(0, 173, 181);
 }
 
 .container {
@@ -89,26 +126,18 @@ hr {
   margin-bottom: 20px;
 }
 
-/* #home {
-  background-image: url("../bg-img/home-cnt.png");
-  background-size: 500px;
-  background-repeat: no-repeat;
-  background-position: center;
-} */
-
 .icon_box {
   position: absolute;
   width: 100vw;
   display: flex;
   justify-content: center;
-  bottom: 20px;
+  bottom: 100px;
 }
 
-.item_box {
+.item_wrapper {
   position: relative;
   margin-top: 35vh;
   margin-bottom: 10vh;
-  height: 100vh;
   padding: 0 50px;
 }
 
@@ -126,10 +155,92 @@ hr {
 .project_box,
 .contact_box {
   position: relative;
-  padding: 25px 10px 0px 10px;
+  padding: 0px 10px 0px 10px;
   border: 3px solid #fff;
   border-radius: 30px;
   justify-content: center;
+}
+.skill_box,
+.project_box,
+.contact_box {
+  text-align: center;
+}
+.skill_box,
+.about_box {
+  padding-top: 25px;
+}
+
+.project_box {
+  padding: 30px;
+  background-color: rgb(238, 238, 238);
+}
+
+.projects-wrapper {
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0 10% 0 10%;
+}
+
+.project-img_area {
+  position: relative;
+  flex-direction: column;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  border-radius: 20px;
+}
+
+.project-img_area img {
+  border-radius: 20px;
+  height: 50vh;
+  width: 100%;
+}
+
+.project-img_script {
+  color: black;
+}
+
+.project-img_info:hover {
+  background-color: #1f1b1bb6;
+  transition: 0.3s;
+  opacity: 1;
+}
+
+.project-img_info {
+  transition: 0.3s;
+  opacity: 0;
+  position: absolute;
+  border-radius: 20px;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.project-img_info svg {
+  margin: 0 30px;
+  width: 10vw;
+}
+.project-img_info svg:hover {
+  cursor: pointer;
+  filter: brightness(0.6);
+}
+
+.project-img_info svg {
+  height: 150px;
+}
+
+.project-img_infoBox {
+  justify-content: center;
+  display: flex;
+  padding: 140px 0;
+  height: 100%;
+  width: 100%;
+}
+
+.section-heightBox {
+  height: 90px;
+  position: absolute;
+  top: -180px;
 }
 
 .content_title {
@@ -151,6 +262,40 @@ hr {
   color: rgb(238, 238, 238);
   top: -0.1vw;
   left: 0.8vw;
+}
+
+.about-text {
+  white-space: pre-line;
+  line-height: 4.5; /*글 간격*/
+  font-size: 18px;
+}
+
+.aboutMe-wrapper {
+  margin: 20px 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.aboutMe-icon_wrapper {
+  padding: 45px 0;
+}
+
+.aboutMe-icon-box {
+  display: flex;
+}
+
+.aboutMe-icon_img {
+  height: 24px;
+}
+
+.aboutMe-icon_content {
+  margin: 0 0 30px 30px;
+}
+
+.aboutMe-myImage {
+  /* animation: left-right-moving 3s infinite; */
+  height: 360px;
+  border-radius: 50%;
 }
 
 .skill_item {
@@ -177,6 +322,7 @@ hr {
 }
 
 .skill_description {
+  white-space: pre-line;
   margin-bottom: 70px;
 }
 
@@ -200,9 +346,7 @@ hr {
 .top_button {
   right: 20px;
   bottom: 20px;
-  animation-name: moveTop;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation: moveTop 2s infinite;
 }
 
 .top_button a {
@@ -211,9 +355,9 @@ hr {
   width: 50px;
   align-items: center;
   justify-content: center;
-  background-color: antiquewhite;
+  background-color: rgba(0, 173, 181, 0.856);
   border-radius: 30px;
-  color: black;
+  color: #eee;
   text-decoration: none;
   transition: all 0.4s ease 0s;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px,
@@ -221,30 +365,8 @@ hr {
 }
 .top_button a:hover {
   /* transform: rotateY(180deg); */
-  background-color: rgb(202, 191, 176);
-}
-
-/* 상단 스크롤 이벤트 */
-.progress {
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 3px;
-  border-radius: 0;
-  z-index: 10000;
-}
-
-progress::-webkit-progress-bar {
-  background-color: rgb(34, 40, 49);
-}
-
-progress::-webkit-progress-value {
-  background: #00c3ff; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #ffff1c,
-    #00c3ff
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  // background-color: rgb(0, 173, 181);
+  filter: brightness(0.6);
 }
 
 /* footer */
@@ -267,22 +389,32 @@ progress::-webkit-progress-value {
   margin: 30px;
   align-items: center;
 }
+
+.contact_icon_box a:hover {
+  filter: brightness(0.6);
+}
+
 .contact_icon_box p {
   margin-left: 20px;
   display: inline-block;
   color: #fff;
   cursor: pointer;
 }
-.contact_icon_box img {
-  cursor: pointer;
-}
 
 .contact_icon {
+  cursor: pointer;
   margin: 5px;
 }
 
+/* .contact_icon:hover {
+  filter: brightness(0.6);
+} */
+
 /* 반응형 설정 */
 @media screen and (max-width: 992px) {
+  body {
+    min-width: 1400px;
+  }
   .navbar {
     font-size: 10px;
     padding: 10px 5px;
@@ -290,7 +422,7 @@ progress::-webkit-progress-value {
   .collapse {
     margin-left: 0;
   }
-  .item_box {
+  .item_wrapper {
     height: 100%;
   }
 }
@@ -318,7 +450,7 @@ progress::-webkit-progress-value {
   #home {
     background-size: 350px 350px;
   }
-  .item_box {
+  .item_wrapper {
     height: 100%;
   }
   .skill_img {
@@ -389,3 +521,15 @@ progress::-webkit-progress-value {
     transform: translateY(-2000px);
   }
 } /*# sourceMappingURL=App.css.map */
+
+@keyframes left-right-moving {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

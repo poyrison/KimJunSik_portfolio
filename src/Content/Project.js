@@ -37,6 +37,7 @@ function Project() {
               <div key={i}>
                 <div className="project-img_area">
                   <img
+                    loading="lazy"
                     src={
                       process.env.PUBLIC_URL +
                       `images/projects/${project.title}.png`

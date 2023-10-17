@@ -21,6 +21,7 @@ function Contact() {
               'Referer' 헤더를 전송하지 않도록 합니다.
               이를 통해 참조자 정보의 수집을 방지하게 됩니다. */}
               <img
+                loading="lazy"
                 title="Github"
                 alt="Github"
                 className={`contact_icon github_icon `}
@@ -36,6 +37,7 @@ function Contact() {
           <div data-aos="fade-left" data-aos-once="true">
             <a href="mailto:junsik8879@gmail.com">
               <img
+                loading="lazy"
                 title="email"
                 alt="email"
                 className={`contact_icon email_icon `}

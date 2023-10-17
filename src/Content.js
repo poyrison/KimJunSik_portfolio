@@ -8,12 +8,12 @@ import Project from "./Content/Project.js";
 import Contact from "./Content/Contact.js";
 
 function Content({ homeTitle, scroll }) {
-  const [icon, setIcon] = useState("invisible");
+  const [iconVisibility, setIconVisibility] = useState("invisible");
 
   useEffect(() => {
-    scroll >= 0.1 && setIcon("invisible");
+    scroll >= 0.1 && setIconVisibility("invisible");
     if (scroll <= 0) {
-      setIcon("visible");
+      setIconVisibility("visible");
     }
   }, [scroll]);
 
@@ -29,7 +29,7 @@ function Content({ homeTitle, scroll }) {
           <p className="home_word">
             안녕하세요, 프론트엔드 개발자 김준식입니다.
           </p>
-          <div className={`icon_box ${icon}`}>
+          <div className={`icon_box ${iconVisibility}`}>
             <p
               className="mouse"
               data-aos="fade-up"

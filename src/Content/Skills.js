@@ -73,6 +73,7 @@ function Skills({ gridStyle }) {
             data-aos-once="true"
           >
             <img
+              loading="lazy"
               src={process.env.PUBLIC_URL + `/images/skills/${skill.title}.png`}
               alt={`${skill.title}-logo`}
               className="skill_img"

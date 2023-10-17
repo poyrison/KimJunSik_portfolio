@@ -38,7 +38,7 @@ function Nav({ navVisibility }) {
             KJS's Portfolio
           </a>
           <button
-            className="navbar-toggler"
+            className="navbar-toggler navbar-dark"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarTogglerDemo02"
@@ -50,20 +50,17 @@ function Nav({ navVisibility }) {
           </button>
           <div
             className={`${clientWidth <= 992 ? narrowNavbar : wideNavbar}`}
+            // 너비가 992px 이하 일 때 navbar item을 toggle-icon 클릭을 통해 확인
             id="navbarTogglerDemo02"
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              {navItems.map((navItem, i) => {
-                return (
-                  <>
-                    <li className="nav-item" key={navItem.id}>
-                      <a className="nav-link" href={`${navItem.href}`}>
-                        {`${navItem.name}`}
-                      </a>
-                    </li>
-                  </>
-                );
-              })}
+              {navItems.map((navItem) => (
+                <li className="nav-item" key={navItem.id}>
+                  <a className="nav-link" href={navItem.href}>
+                    {navItem.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
