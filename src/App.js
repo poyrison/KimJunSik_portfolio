@@ -111,20 +111,6 @@ function App() {
     scroll >= 200 ? setNavVisibility("visible") : setNavVisibility("invisible");
   }, []);
 
-  // scroll 값에 의한 navbar 배경색 및 blur 효과 추가
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setNavScroll(document.documentElement.scrollTop);
-  //     console.log("스크롤 이벤트 진행중");
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
   return (
     <div className="App">
       <div className="background fixed">

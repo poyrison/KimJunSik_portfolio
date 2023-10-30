@@ -19,6 +19,7 @@ function Content({ homeTitle, scroll }) {
 
   // grid 클래스
   const gridStyle = "col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4";
+  const clientWidth = document.documentElement.clientWidth;
 
   return (
     <div>
@@ -29,17 +30,19 @@ function Content({ homeTitle, scroll }) {
           <p className="home_word">
             안녕하세요, 프론트엔드 개발자 김준식입니다.
           </p>
-          <div className={`icon_box ${iconVisibility}`}>
-            <p
-              className="mouse"
-              data-aos="fade-up"
-              data-aos-delay="3000"
-              data-aos-once="true"
-            ></p>
-            <i data-aos="fade-up" data-aos-delay="3000" data-aos-once="true">
-              Scroll Down
-            </i>
-          </div>
+          {clientWidth >= 768 && (
+            <div className={`icon_box ${iconVisibility}`}>
+              <p
+                className="mouse"
+                data-aos="fade-up"
+                data-aos-delay="3000"
+                data-aos-once="true"
+              ></p>
+              <i data-aos="fade-up" data-aos-delay="3000" data-aos-once="true">
+                Scroll Down
+              </i>
+            </div>
+          )}
         </div>
       </div>
       <Container fluid className="container">
