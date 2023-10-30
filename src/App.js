@@ -10,7 +10,7 @@ import Aos from "aos";
 
 function App() {
   const [scroll] = useState(0); // scroll-bar
-  const [navScroll, setNavScroll] = useState(false);
+  const [navScroll] = useState(false);
   const [navVisibility, setNavVisibility] = useState("invisible");
   const [homeTitle, setHomeTitle] = useState("");
 
