@@ -10,9 +10,7 @@ import Aos from "aos";
 
 function App() {
   const [scroll] = useState(0); // scroll-bar
-  const [navScroll, setNavScroll] = useState(
-    document.documentElement.scrollTop
-  );
+  const [navScroll, setNavScroll] = useState(false);
   const [navVisibility, setNavVisibility] = useState("invisible");
   const [homeTitle, setHomeTitle] = useState("");
 
@@ -35,7 +33,6 @@ function App() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       if (count >= completionWord.length) {
-        console.log("타이핑 작성 끝");
         clearInterval(intervalId);
       } else {
         setHomeTitle((prevTitleValue) => {
@@ -43,12 +40,10 @@ function App() {
             ? prevTitleValue + completionWord[count]
             : completionWord[0];
           setCount(count + 1);
-          console.log("타이핑 작성중");
           return result;
         });
       }
     }, 100);
-
     return () => clearInterval(intervalId);
   }, [count]);
 
@@ -60,7 +55,6 @@ function App() {
       (items) => {
         items.forEach((item) => {
           if (item.isIntersecting) {
-            console.log("타이핑 효과 초기화");
             setCount(0);
             setHomeTitle("");
           }
@@ -85,17 +79,11 @@ function App() {
           if (item.isIntersecting) {
             // 각 topBtn을 순회하며 클래스를 조작
             topBtn.forEach((btn) => {
-              console.log(
-                "topBtn에 invisible 클래스 추가 및 visible 클래스 삭제"
-              );
               btn.classList.add("invisible");
               btn.classList.remove("visible");
             });
           } else {
             topBtn.forEach((btn) => {
-              console.log(
-                "topBtn에 visible 클래스 추가 및 invisible 클래스 추가"
-              );
               btn.classList.remove("invisible");
               btn.classList.add("visible");
             });
@@ -115,7 +103,6 @@ function App() {
     const scroll = document.documentElement.scrollTop;
 
     const navVisibleTimer = () => {
-      console.log("navbar visible");
       setNavVisibility("visible");
     };
     setTimeout(navVisibleTimer, 3100);
@@ -124,18 +111,19 @@ function App() {
     scroll >= 200 ? setNavVisibility("visible") : setNavVisibility("invisible");
   }, []);
 
-  // scroll 값에 의한 navbar 배경색 blur 유무
-  useEffect(() => {
-    const handleScroll = () => {
-      setNavScroll(document.documentElement.scrollTop);
-    };
+  // scroll 값에 의한 navbar 배경색 및 blur 효과 추가
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setNavScroll(document.documentElement.scrollTop);
+  //     console.log("스크롤 이벤트 진행중");
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
     <div className="App">

@@ -22,4 +22,4 @@
 # 주요 기능
 
 - 첫 화면에서 타이핑 효과 적용
-- Intersection Observer API를 사용하여 스크롤 애니메이션 적용
+- Intersection Observer API를 사용하여 스크롤 애니메이션 최적화

@@ -29,7 +29,7 @@ function Nav({ navVisibility, navScroll }) {
     <>
       <nav
         className={`navbar navbar-expand-lg bg-body-tertiary ${navVisibility}`}
-        id={`${navScroll <= 200 ? "navbar" : "navbarBlur"}`}
+        id={`${navScroll == true ? "navbar" : "navbarBlur"}`}
       >
         <div className="container-fluid">
           <a className="navbar-brand" href="#home">
