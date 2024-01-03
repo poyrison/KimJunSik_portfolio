@@ -28,7 +28,7 @@ function Nav({ navVisibility, navScroll }) {
   return (
     <>
       <nav
-        className={`navbar navbar-expand-lg bg-body-tertiary ${navVisibility}`}
+        className={`navbar navbar-expand-lg bg-body-tertiary fixed ${navVisibility}`}
         id={`${navScroll === true ? "navbar" : "navbarBlur"}`}
       >
         <div className="container-fluid">
