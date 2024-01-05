@@ -1,6 +1,6 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 
 import About from "./Content/About.js";
 import Skills from "./Content/Skills.js";
@@ -9,7 +9,6 @@ import Contact from "./Content/Contact.js";
 
 function Content({ homeTitle, scroll }) {
   const [iconVisibility, setIconVisibility] = useState("invisible");
-  const move = useRef(null);
 
   useEffect(() => {
     scroll >= 0.1 && setIconVisibility("invisible");
@@ -74,7 +73,7 @@ function Content({ homeTitle, scroll }) {
           </Row>
         </div>
         <div className="item_wrapper" id="project">
-          <Row className="project_box" ref={move}>
+          <Row className="project_box">
             <div className="section-heightBox" id="project-section"></div>
             <h3
               className="content_title"

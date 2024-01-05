@@ -21,7 +21,7 @@ function Project() {
     },
     {
       title: "simpleWeather",
-      script: "날씨웹",
+      script: "날씨 프로젝트",
       github: "https://github.com/poyrison/Simple-Weather",
       url: "https://simple-weather-kjs.netlify.app",
       githubIcon: "github",
@@ -39,23 +39,26 @@ function Project() {
 
   const handleDragStart = (e) => e.preventDefault();
 
-  const itemWidth = "1160px";
-  const itemHeigh = "500px";
+  const itemWidth = "1155px";
 
-  const items = projectImage.map((project, i) => (
+  const items = projectImage.map((project) => (
     <>
       <img
         src={process.env.PUBLIC_URL + `/images/projects/${project.title}.png`}
         alt={project.title}
         onDragStart={handleDragStart}
         role="presentation"
-        minWidth={itemWidth}
+        minHeight={"500px"}
         width={itemWidth}
-        height={itemHeigh}
+        height={"600px"}
+        style={{
+          borderRadius: "15px",
+        }}
       />
       <div className="project-img_info">
-        {/* <div> */}
-        {/* <p>{project.script}</p> */}
+        <p style={{ position: "absolute", top: "10%", left: "46%" }}>
+          {project.script}
+        </p>
         <div className="project-img_infoBox flex">
           <a href={`${project.github}`}>
             <svg
@@ -65,6 +68,7 @@ function Project() {
               stroke="#000000"
               strokeWidth="0.00024000000000000003"
             >
+              <title>{`${project.script}`} Github</title>
               <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
               <g
                 id="SVGRepo_tracerCarrier"
@@ -86,6 +90,7 @@ function Project() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
+              <title>{`${project.script}`} Link</title>
               <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
               <g
                 id="SVGRepo_tracerCarrier"
@@ -104,7 +109,6 @@ function Project() {
             </svg>
           </a>
         </div>
-        {/* </div> */}
       </div>
     </>
   ));
@@ -114,9 +118,10 @@ function Project() {
       items={items}
       autoWidth
       autoHeight
-      autoPlay
+      // autoPlay
       autoPlayInterval={4000}
-      animationDuration={1500}
+      animationDuration={1000}
+      infinite
     />
   );
 }

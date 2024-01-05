@@ -2,7 +2,7 @@
 @import "scroll_icon.css";
 @import "stars.css";
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
-@import "react-alice-carousel/lib/scss/alice-carousel.scss";
+
 @font-face {
   font-family: "TAEBAEKmilkyway";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2")
@@ -173,42 +173,15 @@ hr {
 .project_box {
   padding: 30px;
   background-color: rgb(238, 238, 238);
-  transition: all 0.5s ease-in-out;
-}
-
-.projects-wrapper {
-  // overflow: hidden;
-  // padding: 0 10% 0 10%;
-}
-
-.project-img_area {
-  position: relative;
-  margin: 60px 35px 60px 0px;
-  border-radius: 20px;
-  min-width: 350px;
-  width: 60vw;
-  float: left;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.project-img_area img {
-  border-radius: 20px;
-  height: 500px;
-  width: 60vw;
-}
-
-.project-img_script {
-  color: black;
+  // transition: all 0.5s ease-in-out;
 }
 
 .project-img_info {
-  transition: 0.3s;
-  opacity: 0;
-  position: absolute;
-  border-radius: 20px;
-  color: #fff;
+  border-radius: 15px;
   width: 100%;
   height: 100%;
+  opacity: 0;
+  position: absolute;
   top: 0;
   left: 0;
 }
@@ -238,6 +211,33 @@ hr {
   justify-content: center;
   flex-direction: column;
   display: flex;
+}
+
+/* 캐러셀 */
+.alice-carousel__dots-item {
+  position: relative;
+  z-index: 1000;
+}
+
+.alice-carousel__prev-btn-wrapper {
+  text-align: center;
+}
+
+.alice-carousel__prev-btn,
+.alice-carousel__next-btn {
+  position: absolute;
+  bottom: -1rem;
+}
+
+.alice-carousel__prev-btn {
+  left: 0;
+}
+
+.alice-carousel__prev-btn-item,
+.alice-carousel__next-btn-item {
+  padding: 5px 15px !important;
+  border: 1px solid #646464;
+  border-radius: 15px;
 }
 
 .section-heightBox {
@@ -373,22 +373,6 @@ hr {
   filter: brightness(0.6);
 }
 
-/* footer */
-.footer_wrapper {
-  display: flex;
-  bottom: 0px;
-  font-size: 12px;
-  height: 150px;
-  padding: 10px 5px;
-  background-color: #222;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.footer_wrapper p {
-  margin: 0;
-}
-
 .contact_icon_box {
   margin: 30px;
   align-items: center;
@@ -410,9 +394,21 @@ hr {
   margin: 5px;
 }
 
-/* .contact_icon:hover {
-  filter: brightness(0.6);
-} */
+/* footer */
+.footer_wrapper {
+  display: flex;
+  bottom: 0px;
+  font-size: 12px;
+  height: 150px;
+  padding: 10px 5px;
+  background-color: #222;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer_wrapper p {
+  margin: 0;
+}
 
 /* 반응형 설정 */
 @media screen and (max-width: 992px) {
