@@ -118,7 +118,7 @@ function Project() {
       items={items}
       autoWidth
       autoHeight
-      // autoPlay
+      autoPlay
       autoPlayInterval={4000}
       animationDuration={1000}
       infinite
