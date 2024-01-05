@@ -60,15 +60,15 @@ function Project() {
           {project.script}
         </p>
         <div className="project-img_infoBox flex">
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            stroke="#000000"
-            strokeWidth="0.00024000000000000003"
-          >
-            <title>{`${project.script}`} Github</title>
-            <a href={`${project.github}`}>
+          <a href={`${project.github}`}>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#000000"
+              strokeWidth="0.00024000000000000003"
+            >
+              <title>{`${project.script}`} Github</title>
               <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
               <g
                 id="SVGRepo_tracerCarrier"
@@ -82,15 +82,15 @@ function Project() {
                   fill="#eee"
                 ></path>{" "}
               </g>
-            </a>
-          </svg>
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>{`${project.script}`} Link</title>
-            <a href={`${project.url}`}>
+            </svg>
+          </a>
+          <a href={`${project.url}`}>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>{`${project.script}`} Link</title>
               <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
               <g
                 id="SVGRepo_tracerCarrier"
@@ -106,8 +106,8 @@ function Project() {
                   strokeLinecap="round"
                 ></path>{" "}
               </g>
-            </a>
-          </svg>
+            </svg>
+          </a>
         </div>
       </div>
     </>
