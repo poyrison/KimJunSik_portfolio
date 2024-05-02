@@ -7,7 +7,7 @@ function Project() {
       title: "board",
       script: "게시판 프로젝트",
       github: "https://github.com/poyrison/board",
-      url: "https://todo-app-387113.du.r.appspot.com/",
+      url: "http://community-hub.ap-northeast-2.elasticbeanstalk.com/",
       githubIcon: "github",
       urlIcon: "projectLink",
     },
@@ -15,7 +15,7 @@ function Project() {
       title: "shop",
       script: "쇼핑몰 프로젝트",
       github: "https://github.com/poyrison/react_shop",
-      url: "https://reactshop-portfolio.netlify.app/",
+      url: "https://js-shop.netlify.app",
       githubIcon: "github",
       urlIcon: "projectLink",
     },
@@ -39,7 +39,7 @@ function Project() {
 
   const handleDragStart = (e) => e.preventDefault();
 
-  const itemWidth = "1155px";
+  const itemWidth = "100%";
 
   const items = projectImage.map((project) => (
     <>
@@ -56,7 +56,10 @@ function Project() {
         }}
       />
       <div className="project-img_info">
-        <p style={{ position: "absolute", top: "10%", left: "46%" }}>
+        <p
+          className="project-title"
+          style={{ position: "absolute", top: "10%", left: "46%" }}
+        >
           {project.script}
         </p>
         <div className="project-img_infoBox flex">

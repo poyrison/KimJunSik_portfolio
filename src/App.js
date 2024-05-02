@@ -1,8 +1,6 @@
 import "./css/App.css";
 
 import { useEffect, useState } from "react";
-// import { useSelector } from "react-redux";
-
 import Content from "./Content";
 import Footer from "./Footer";
 import Nav from "./Nav";
