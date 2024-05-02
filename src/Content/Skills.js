@@ -25,19 +25,19 @@ function Skills({ gridStyle }) {
     //   프론트엔드와 연결한 경험이 있습니다.`,
     //   aos: "fade-down-left",
     // },
-    // {
-    //   title: "JavaScript",
-    //   content: `ES6 이후 자바스크립트를 활용하여
-    //   동적인 웹페이지를 작성할 수 있습니다.
-    //   가독성 좋은 코드와 최적화에 관심을 가지고있습니다.`,
-    //   aos: "fade-right",
-    // },
     {
-      title: "TypeScript",
-      content: `엄격한 타입 적용, 컴파일 단계에서
-       에러를 잡을 때 사용할 수 있습니다.`,
+      title: "JavaScript",
+      content: `ES6 이후 자바스크립트를 활용하여
+      동적인 웹페이지를 작성할 수 있습니다.
+      가독성 좋은 코드와 최적화에 관심을 가지고있습니다.`,
       aos: "fade-down-left",
     },
+    // {
+    //   title: "TypeScript",
+    //   content: `엄격한 타입 적용, 컴파일 단계에서
+    //    에러를 잡을 때 사용할 수 있습니다.`,
+    //   aos: "fade-down-left",
+    // },
     {
       title: "React",
       content: `함수형, 클래스형 Components, Hooks, 라이프 사이클 등을 이용하여 SPA를 작성할 수 있습니다.`,
