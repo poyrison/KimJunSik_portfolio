@@ -23,9 +23,9 @@
 # 주요 기능
 
 - 첫 화면에서 타이핑 효과 적용
-  <img src="/images/readme/typing.gif" title="typing" alt="typing"></img>
+  ![typing](public/images/readme/typing.gif)
 - Intersection Observer API를 사용하여 스크롤 애니메이션 최적화
 - Projects 섹션에 캐러셀 기능으로 사용자가 프로젝트 이미지를 슬라이드 형태로 탐색할 수 있도록 구성
-  <img src="/images/readme/pagination.gif" title="pagination" alt="pagination"></img>
+  ![pagination](public/images/readme/pagination.gif)
 - Projects 섹션에 마우스 호버 시 프로젝트별 GitHub 링크와 배포된 링크를 확인 가능
-  <img src="/images/readme/projectLink.gif" title="projectLink" alt="projectLink"></img>
+  ![projectLink](public/images/readme/projectLink.gif)
