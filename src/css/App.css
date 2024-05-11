@@ -276,8 +276,10 @@ hr {
 
 .about-text {
   white-space: pre-line;
-  line-height: 4.5; /*글 간격*/
+  padding: 3px 5%;
+  line-height: 4; /*줄 간격*/
   font-size: 18px;
+  text-align: center;
 }
 
 .aboutMe-wrapper {

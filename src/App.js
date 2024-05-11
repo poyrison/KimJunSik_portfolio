@@ -11,6 +11,7 @@ function App() {
   const [navScroll] = useState(false);
   const [navVisibility, setNavVisibility] = useState("invisible");
   const [homeTitle, setHomeTitle] = useState("");
+  const [windowWidth, setWindowWidth] = useState(0);
 
   const [count, setCount] = useState(0);
   const completionWord = "WELCOME TO MY PORTFOLIO :)";
@@ -26,6 +27,12 @@ function App() {
           duration: 1500, // .. 초에 걸쳐서 실행
         });
   });
+
+  useEffect(() => {
+    const windowWidth = window.innerWidth;
+    setWindowWidth(windowWidth);
+    console.log(windowWidth);
+  }, []);
 
   // 메인화면 타이핑 효과
   useEffect(() => {
@@ -118,7 +125,11 @@ function App() {
         <div id="stars3"></div>
       </div>
       <Nav navVisibility={navVisibility} navScroll={navScroll} />
-      <Content homeTitle={homeTitle} scroll={scroll} />
+      <Content
+        homeTitle={homeTitle}
+        scroll={scroll}
+        windowWidth={windowWidth}
+      />
       <div className={`top_button fixed `}>
         <a href="#home">
           <i className="fi fi-br-chevron-double-up"></i>

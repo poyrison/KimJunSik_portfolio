@@ -7,7 +7,7 @@ import Skills from "./Content/Skills.js";
 import Project from "./Content/Project.js";
 import Contact from "./Content/Contact.js";
 
-function Content({ homeTitle, scroll }) {
+function Content({ homeTitle, scroll, windowWidth }) {
   const [iconVisibility, setIconVisibility] = useState("invisible");
 
   useEffect(() => {
@@ -69,7 +69,7 @@ function Content({ homeTitle, scroll }) {
             >
               Skills
             </h3>
-            <Skills gridStyle={gridStyle} />
+            <Skills gridStyle={gridStyle} windowWidth={windowWidth} />
           </Row>
         </div>
         <div className="item_wrapper" id="project">

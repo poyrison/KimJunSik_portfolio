@@ -48,7 +48,6 @@ function Project() {
         alt={project.title}
         onDragStart={handleDragStart}
         role="presentation"
-        minHeight={"500px"}
         width={itemWidth}
         height={"600px"}
         style={{
